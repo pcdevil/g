@@ -11,3 +11,5 @@ function g {
 	fi
 	return $?
 }
+
+compdef g=git
