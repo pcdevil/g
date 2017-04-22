@@ -2,12 +2,10 @@ unalias g
 function g {
 	if [ $# -gt 0 ]; then
 		git "$@"
+	elif git rev-parse --is-inside-work-tree >/dev/null 2>/dev/null; then
+		git status
 	else
-		if git symbolic-ref HEAD >/dev/null 2>/dev/null; then
-			git status
-		else
-			git --help
-		fi
+		git --help
 	fi
 	return $?
 }
