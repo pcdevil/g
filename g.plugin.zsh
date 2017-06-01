@@ -1,13 +1,18 @@
-unalias g
-function g {
-	if [ $# -gt 0 ]; then
-		git "$@"
-	elif git rev-parse --is-inside-work-tree >/dev/null 2>/dev/null; then
-		git status
+function git {
+	local gitRootDir=$(command git rev-parse --show-toplevel 2>/dev/null)
+
+	if [ $# -eq 0 ]; then
+		if [ -n "$gitRootDir" ]; then
+			command git status
+		else
+			command git --help
+		fi
 	else
-		git --help
+		command git "$@"
 	fi
+
 	return $?
 }
 
-compdef g=git
+unalias g
+alias g=git
