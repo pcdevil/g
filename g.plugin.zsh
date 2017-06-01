@@ -7,10 +7,26 @@ function git {
 		else
 			command git --help
 		fi
-	else
-		command git "$@"
+		return $?
 	fi
 
+	local command="$1"
+	case $command in
+		cd)
+			shift
+			git-cd "$@"
+			;;
+		*)
+			command git "$@"
+			;;
+	esac
+	return $?
+}
+
+function git-cd {
+	local gitRootDir=$(command git rev-parse --show-toplevel 2>/dev/null)
+
+	cd "$gitRootDir/$@"
 	return $?
 }
 
