@@ -16,6 +16,10 @@ function git {
 			shift
 			git-cd "$@"
 			;;
+		g|git)
+			shift
+			git "$@"
+			;;
 		su|set-user)
 			shift
 			git-set-user "$@"
