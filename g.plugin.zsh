@@ -1,5 +1,6 @@
 source $G_DIR/commands/cd.command.zsh
 source $G_DIR/commands/set-user.command.zsh
+source $G_DIR/commands/super-init.command.zsh
 source $G_DIR/commands/take.command.zsh
 
 function git {
@@ -23,6 +24,10 @@ function git {
 		g|git)
 			shift
 			git "$@"
+			;;
+		si|super-init)
+			shift
+			git-super-init "$@"
 			;;
 		su|set-user)
 			shift
