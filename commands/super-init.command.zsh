@@ -2,21 +2,21 @@ function git-super-init {
 	local name=$1
 	local type=$2
 
-	_create-folder
-	_create-license
-	_create-readme
-	_create-gitignore
-	_create-tmp
-	_create-commit
+	_git-super-init__create-folder
+	_git-super-init__create-license
+	_git-super-init__create-readme
+	_git-super-init__create-gitignore
+	_git-super-init__create-tmp
+	_git-super-init__create-commit
 }
 
-function _create-folder {
+function _git-super-init__create-folder {
 	mkdir --parents $name
 	cd $name
 	git init
 }
 
-function _create-license {
+function _git-super-init__create-license {
 	local year=$(date +%Y)
 	local author=$(git config user.name)
 	local url=$(git config user.web)
@@ -30,7 +30,7 @@ function _create-license {
 	) >LICENSE.md
 }
 
-function _create-readme {
+function _git-super-init__create-readme {
 	(
 		echo "# $name"
 		echo
@@ -39,7 +39,7 @@ function _create-readme {
 	) >README.md
 }
 
-function _create-gitignore {
+function _git-super-init__create-gitignore {
 	local base_url="https://www.gitignore.io/api/"
 
 	local os_ignores=(linux osx windows)
@@ -55,7 +55,7 @@ function _create-gitignore {
 	curl --silent --show-error --location $base_url${(j:,:)ignores} >.gitignore
 }
 
-function _create-tmp {
+function _git-super-init__create-tmp {
 	mkdir --parent tmp
 	touch tmp/.gitkeep
 	(
@@ -65,7 +65,7 @@ function _create-tmp {
 	) >>.gitignore
 }
 
-function _create-commit {
+function _git-super-init__create-commit {
 	git add --force .
 	git commit --message="chore($name): initial commit"
 }

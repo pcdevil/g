@@ -1,15 +1,15 @@
 function git-set-user {
 	local repoUrl=$1
-	local shortRepoUrl=$(_get-short-url $repoUrl)
+	local shortRepoUrl=$(_git-set-user__get-short-url $repoUrl)
 
-	local name=$(_get-git-user-var name $shortRepoUrl)
-	local email=$(_get-git-user-var email $shortRepoUrl)
+	local name=$(_git-set-user__get-git-user-var name $shortRepoUrl)
+	local email=$(_git-set-user__get-git-user-var email $shortRepoUrl)
 
 	git config user.name "$name"
 	git config user.email "$email"
 }
 
-function _get-short-url {
+function _git-set-user__get-short-url {
 	local domain="$1"
 
 	if [[ -z $domain ]]; then
@@ -48,7 +48,7 @@ function _get-short-url {
 	echo $protocol$domain$tld
 }
 
-function _get-git-user-var {
+function _git-set-user__get-git-user-var {
 	local variable="$1"
 	local url="$2"
 
