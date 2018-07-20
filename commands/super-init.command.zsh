@@ -6,6 +6,7 @@ function git-super-init {
 	_git-super-init__create-license
 	_git-super-init__create-readme
 	_git-super-init__create-gitignore
+	_git-super-init__extend-gitignore
 	_git-super-init__create-tmp
 	_git-super-init__create-commit
 }
@@ -55,14 +56,19 @@ function _git-super-init__create-gitignore {
 	curl --silent --show-error --location $base_url${(j:,:)ignores} >.gitignore
 }
 
+function _git-super-init__extend-gitignore {
+	(
+		echo
+		echo "### Project ###"
+		echo "/tmp/**"
+		echo "!/tmp/.gitkeep"
+		echo ".env"
+	) >>.gitignore
+}
+
 function _git-super-init__create-tmp {
 	mkdir --parent tmp
 	touch tmp/.gitkeep
-	(
-		 echo
-		 echo "### Project ###"
-		 echo "/tmp/"
-	) >>.gitignore
 }
 
 function _git-super-init__create-commit {
