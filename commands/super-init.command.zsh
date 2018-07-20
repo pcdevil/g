@@ -72,6 +72,6 @@ function _git-super-init__create-tmp {
 }
 
 function _git-super-init__create-commit {
-	git add --force .
+	git add .
 	git commit --message="chore($name): initial commit"
 }
