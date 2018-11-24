@@ -60,6 +60,8 @@ function _git-super-init__extend-gitignore {
 	(
 		echo
 		echo "### Project ###"
+		echo "/dist/**"
+		echo "!/dist/.gitkeep"
 		echo "/tmp/**"
 		echo "!/tmp/.gitkeep"
 		echo ".env"
