@@ -1,6 +1,6 @@
 function git-super-init {
-	local name=$1
-	local type=$2
+	local name="$1"
+	local type="$2"
 	local description="$3"
 
 	_git-super-init__create-folder
