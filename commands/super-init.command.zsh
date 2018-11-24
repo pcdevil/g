@@ -9,6 +9,7 @@ function git-super-init {
 	_git-super-init__create-gitignore
 	_git-super-init__extend-gitignore
 	_git-super-init__create-ignored-folder tmp
+	_git-super-init__create-ignored-folder dist
 	_git-super-init__create-commit
 }
 
