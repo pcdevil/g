@@ -1,6 +1,7 @@
 function git-super-init {
 	local name=$1
 	local type=$2
+	local description="$3"
 
 	_git-super-init__create-folder
 	_git-super-init__create-license
@@ -34,6 +35,7 @@ function _git-super-init__create-license {
 function _git-super-init__create-readme {
 	(
 		echo "# $name"
+		echo "$description"
 		echo
 		echo "## License"
 		echo "Available under the [MIT license](LICENSE.md)."
