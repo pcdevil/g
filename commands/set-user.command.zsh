@@ -4,9 +4,11 @@ function git-set-user {
 
 	local name=$(_git-set-user__get-git-user-var name $shortRepoUrl)
 	local email=$(_git-set-user__get-git-user-var email $shortRepoUrl)
+	local signingkey=$(_git-set-user__get-git-user-var signingkey $shortRepoUrl)
 
 	git config user.name "$name"
 	git config user.email "$email"
+	git config user.signingkey "$signingkey"
 }
 
 function _git-set-user__get-short-url {
