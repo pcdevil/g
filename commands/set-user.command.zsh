@@ -8,7 +8,10 @@ function git-set-user {
 
 	git config user.name "$name"
 	git config user.email "$email"
-	git config user.signingkey "$signingkey"
+
+	if [ -n "$signingkey" ]; then
+		_git-set-user__set-signingkey "$signingkey"
+	fi
 }
 
 function _git-set-user__get-short-url {
@@ -56,4 +59,12 @@ function _git-set-user__get-git-user-var {
 
 	git config --get-urlmatch user.$variable $url 2>/dev/null ||
 		git config user.$variable
+}
+
+function _git-set-user__set-signingkey {
+	local signingkey="$1"
+
+	git config user.signingkey "$signingkey"
+	git config gpg.program /usr/local/bin/gpg
+	git config commit.gpgsign true
 }
