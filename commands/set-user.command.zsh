@@ -1,5 +1,6 @@
 function git-set-user {
-	local repoUrl=$1
+	local originUrl=$(_git-ser-user__get-origin-url)
+	local repoUrl=${1:-$originUrl}
 	local shortRepoUrl=$(_git-set-user__get-short-url $repoUrl)
 
 	local name=$(_git-set-user__get-git-user-var name $shortRepoUrl)
@@ -12,6 +13,10 @@ function git-set-user {
 	if [ -n "$signingkey" ]; then
 		_git-set-user__set-signingkey "$signingkey"
 	fi
+}
+
+function _git-ser-user__get-origin-url {
+	git config --get remote.origin.url 2>/dev/null
 }
 
 function _git-set-user__get-short-url {
