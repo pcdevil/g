@@ -10,28 +10,21 @@ function git {
 		return $?
 	fi
 
-	local command="$1"
-	case $command in
-		cd)
-			shift
-			. git-cd "$@"
-			;;
-		si|super-init)
-			shift
-			. git-super-init "$@"
-			;;
-		su|set-user)
-			shift
-			git-set-user "$@"
-			;;
-		ta|take)
-			shift
-			. git-take "$@"
-			;;
-		*)
-			command git "$@"
-			;;
+	local commandName="$1"
+	local gitCommand=""
+	case $commandName in
+		cd)            gitCommand=git-cd ;;
+		si|super-init) gitCommand=git-super-init ;;
+		su|set-user)   gitCommand=git-set-user ;;
+		ta|take)       gitCommand=git-take ;;
 	esac
+
+	if [ -n "$gitCommand" ]; then
+		shift
+		. "$gitCommand" "$@"
+	else
+		command git "$@"
+	fi
 	return $?
 }
 
