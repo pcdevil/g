@@ -1,4 +1,3 @@
-source $G_DIR/commands/set-user.command.zsh
 source $G_DIR/commands/super-init.command.zsh
 source $G_DIR/commands/take.command.zsh
 
