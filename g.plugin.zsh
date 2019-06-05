@@ -1,5 +1,3 @@
-source $G_DIR/commands/take.command.zsh
-
 function git {
 	local gitRootDir=$(command git rev-parse --show-toplevel 2>/dev/null)
 
@@ -32,7 +30,7 @@ function git {
 			;;
 		ta|take)
 			shift
-			git-take "$@"
+			. git-take "$@"
 			;;
 		*)
 			command git "$@"
