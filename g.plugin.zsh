@@ -1,4 +1,3 @@
-source $G_DIR/commands/cd.command.zsh
 source $G_DIR/commands/set-user.command.zsh
 source $G_DIR/commands/super-init.command.zsh
 source $G_DIR/commands/take.command.zsh
@@ -19,7 +18,7 @@ function git {
 	case $command in
 		cd)
 			shift
-			git-cd "$@"
+			. git-cd "$@"
 			;;
 		g|git)
 			shift
