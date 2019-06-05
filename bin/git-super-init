@@ -1,0 +1,95 @@
+#!/bin/zsh
+
+function create_folder {
+	local name="$1"
+
+	mkdir --parents "$name"
+	cd "$name"
+	git init
+}
+
+function create_license {
+	local year=$(date +%Y)
+	local author=$(git config user.name)
+	local url=$(git config user.web)
+
+	(
+		echo "# The MIT License"
+		echo
+		echo "Copyright 2011-$year $author $url"
+		echo
+		cat $G_DIR/assets/mit-license
+	) >LICENSE.md
+}
+
+function create_readme {
+	local name="$1"
+	local description="$2"
+
+	(
+		echo "# $name"
+		echo "$description"
+		echo
+		echo "## License"
+		echo "Available under the [MIT license](LICENSE.md)."
+	) >README.md
+}
+
+function create_gitignore {
+	local type="$1"
+	local baseUrl="https://www.gitignore.io/api/"
+
+	local osIgnores=(linux osx windows)
+	local editorIgnores=(intellij+all vim visualstudiocode)
+	local nodeIgnores=(node)
+	local phpIgnores=(composer)
+
+	local typedIgnoredVariable=${type}Ignores
+	local typedIgnores=${(P)typedIgnoredVariable}
+
+	local ignores=($osIgnores $typedIgnores $editorIgnores)
+
+	curl --silent --show-error --location $baseUrl${(j:,:)ignores} >.gitignore
+}
+
+function extend_gitignore {
+	(
+		echo
+		echo "### Project ###"
+		echo "/dist/**"
+		echo "!/dist/.gitkeep"
+		echo "/tmp/**"
+		echo "!/tmp/.gitkeep"
+		echo ".env"
+	) >>.gitignore
+}
+
+function create_ignored-folder {
+	local folder="$1"
+
+	mkdir --parent "$folder"
+	touch "$folder/.gitkeep"
+}
+
+function create_commit {
+	local name="$1"
+
+	git add .
+	git commit --message="chore($name): initial commit"
+}
+
+name="$1"
+type="$2"
+description="$3"
+
+create_folder "$name"
+create_license
+create_readme "$name" "$description"
+
+create_gitignore "$type"
+extend_gitignore
+
+create_ignored-folder tmp
+create_ignored-folder dist
+
+create_commit "$name"

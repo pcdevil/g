@@ -1,4 +1,3 @@
-source $G_DIR/commands/super-init.command.zsh
 source $G_DIR/commands/take.command.zsh
 
 function git {
@@ -25,7 +24,7 @@ function git {
 			;;
 		si|super-init)
 			shift
-			git-super-init "$@"
+			. git-super-init "$@"
 			;;
 		su|set-user)
 			shift
