@@ -16,10 +16,6 @@ function git {
 			shift
 			. git-cd "$@"
 			;;
-		g|git)
-			shift
-			git "$@"
-			;;
 		si|super-init)
 			shift
 			. git-super-init "$@"
