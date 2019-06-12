@@ -28,5 +28,4 @@ function git {
 	return $?
 }
 
-unalias g
 alias g=git
