@@ -6,8 +6,8 @@ a (very) simple git helper
 ### g
 The `g` command is the starting point of all other script and provides a
  convenient alias for `git`.
-Calling it without arguments executes the `git status` itself if the _CWD_ is a
- git repository, otherwise calls the `git --help` command.
+Calling it without arguments executes the [git status] itself if the _CWD_ is a
+ git repository, otherwise calls the [git help] command.
 
 ### cd
 Similarly to the built-in `cd` command, this changes the current directory too
@@ -50,4 +50,6 @@ source $G_DIR/g.plugin.zsh
 Available under the [MIT license](LICENSE.md).
 
 [git clone]: https://git-scm.com/docs/git-clone
+[git help]: https://git-scm.com/docs/git-help
+[git status]: https://git-scm.com/docs/git-status
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
