@@ -16,7 +16,7 @@ function create_license {
 	(
 		echo "# The MIT License"
 		echo
-		echo "Copyright 2011-$year $author $url"
+		echo "Copyright $year $author $url"
 		echo
 		cat $G_DIR/assets/mit-license
 	) >LICENSE.md
