@@ -9,6 +9,12 @@ The `g` command is the starting point of all other script and provides a
 Calling it without arguments executes the `git status` itself if the _CWD_ is a
  git repository, otherwise calls the `git --help` command.
 
+### cd
+Similarly to the built-in `cd` command, this changes the current directory too
+ but it jumps to a directory relative to the git root. It can be handy if your
+ project is several level deep and have to change directory very often to an
+ upper level folder (eg.: `dist`, `node_modules`).
+
 ## Install
 
 1. Clone the repositoy to a desired folder
