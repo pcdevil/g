@@ -15,6 +15,22 @@ Similarly to the built-in `cd` command, this changes the current directory too
  project is several level deep and have to change directory very often to an
  upper level folder (eg.: `dist`, `node_modules`).
 
+### take
+Take is a wrapper around [git clone] but by default clones the submodules too.
+ The other feature _take_ provides is to change directory into the newly cloned
+ repository, like [oh-my-zsh's take].
+
+**Alias**: `ta`
+
+**Signature**:
+```
+g take <repository_url> [directory]
+```
+
+**Arguments**:
+- `repository_url`: The pulled repository's url
+- `directory`: Optional, the output directory where to clone
+
 ## Install
 
 1. Clone the repositoy to a desired folder
@@ -32,3 +48,6 @@ source $G_DIR/g.plugin.zsh
 
 ## License
 Available under the [MIT license](LICENSE.md).
+
+[git clone]: https://git-scm.com/docs/git-clone
+[oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
