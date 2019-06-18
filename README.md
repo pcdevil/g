@@ -1,6 +1,14 @@
 # g
 a (very) simple git helper
 
+## Features
+
+### g
+The `g` command is the starting point of all other script and provides a
+ convenient alias for `git`.
+Calling it without arguments executes the `git status` itself if the _CWD_ is a
+ git repository, otherwise calls the `git --help` command.
+
 ## Install
 
 1. Clone the repositoy to a desired folder
