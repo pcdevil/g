@@ -53,9 +53,10 @@ function get_matching_user-var {
 
 function set_signingkey {
 	local signingkey="$1"
+	local gpgBin=$(which gpg)
 
 	git config user.signingkey "$signingkey"
-	git config gpg.program /usr/local/bin/gpg
+	git config gpg.program "$gpgBin"
 	git config commit.gpgsign true
 }
 
