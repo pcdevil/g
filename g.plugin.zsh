@@ -21,7 +21,7 @@ function git {
 
 	if [ -n "$gitCommand" ]; then
 		shift
-		. "$gitCommand" "$@"
+		. "$G_DIR/bin/$gitCommand" "$@"
 	else
 		command git "$@"
 	fi
