@@ -15,12 +15,12 @@ Similarly to the built-in `cd` command, this changes the current directory too
  project is several level deep and have to change directory very often to an
  upper level folder (eg.: `dist`, `node_modules`).
 
- **Signature**:
+#### Signature
  ```zsh
  $ g cd <directory>
  ```
 
-**Arguments**:
+#### Arguments
 - `directory`: The directory path where to jump
 
 ### take
@@ -28,14 +28,15 @@ Take is a wrapper around [git clone] but by default clones the submodules too.
  The other feature _take_ provides is to change directory into the newly cloned
  repository, like [oh-my-zsh's take].
 
-**Alias**: `ta`
+#### Alias
+`ta`
 
-**Signature**:
+#### Signature
 ```zsh
 $ g take <repository_url> [directory]
 ```
 
-**Arguments**:
+#### Arguments
 - `repository_url`: The pulled repository's url
 - `directory`: Optional, the output directory where to clone
 
