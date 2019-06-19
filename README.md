@@ -16,8 +16,8 @@ Similarly to the built-in `cd` command, this changes the current directory too
  upper level folder (eg.: `dist`, `node_modules`).
 
  **Signature**:
- ```
- g cd <directory>
+ ```zsh
+ $ g cd <directory>
  ```
 
 **Arguments**:
@@ -31,8 +31,8 @@ Take is a wrapper around [git clone] but by default clones the submodules too.
 **Alias**: `ta`
 
 **Signature**:
-```
-g take <repository_url> [directory]
+```zsh
+$ g take <repository_url> [directory]
 ```
 
 **Arguments**:
@@ -43,7 +43,7 @@ g take <repository_url> [directory]
 
 1. Clone the repositoy to a desired folder
 ```zsh
-git clone git@github.com:pcdevil/g.git ~/.g
+$ git clone git@github.com:pcdevil/g.git ~/.g
 ```
 
 2. Bootstrap it in your `.zshrc`
