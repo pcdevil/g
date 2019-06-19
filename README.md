@@ -5,28 +5,28 @@ a (very) simple git helper
 
 ### g
 The `g` command is the starting point of all other script and provides a
- convenient alias for `git`.
+convenient alias for `git`.
 Calling it without arguments executes the [git status] itself if the _CWD_ is a
- git repository, otherwise calls the [git help] command.
+git repository, otherwise calls the [git help] command.
 
 ### cd
 Similarly to the built-in `cd` command, this changes the current directory too
- but it jumps to a directory relative to the git root. It can be handy if your
- project is several level deep and have to change directory very often to an
- upper level folder (eg.: `dist`, `node_modules`).
+but it jumps to a directory relative to the git root. It can be handy if your
+project is several level deep and have to change directory very often to an
+upper level folder (eg.: `dist`, `node_modules`).
 
 #### Signature
- ```zsh
- $ g cd <directory>
- ```
+```zsh
+$ g cd <directory>
+```
 
 #### Arguments
 - `directory`: The directory path where to jump
 
 ### take
 Take is a wrapper around [git clone] but by default clones the submodules too.
- The other feature _take_ provides is to change directory into the newly cloned
- repository, like [oh-my-zsh's take].
+The other feature _take_ provides is to change directory into the newly cloned
+repository, like [oh-my-zsh's take].
 
 #### Alias
 `ta`
