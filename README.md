@@ -157,6 +157,7 @@ To make the `.gitignore` file the command will download the content from
 The following templates are applied by default:
 - **Operating systems**: Linux, macOS, Windows
 - **Editors**: IntelliJ+all, Vim, Visual Studio Code
+- **Custom directories**: `[git root]/tmp` and `[git root]/dist` folders
 
 If a _[type]_ is also defined then the appropriate programming language will be
 added to the ignore too. Currently supported languages are `java`, `node`, `php`
