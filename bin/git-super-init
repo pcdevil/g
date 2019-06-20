@@ -28,7 +28,7 @@ function create_readme {
 
 	(
 		echo "# $name"
-		echo "$description"
+		[ -n "$description" ] && echo "$description"
 		echo
 		echo "## License"
 		echo "Available under the [MIT license](LICENSE.md)."
