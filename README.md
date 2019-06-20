@@ -165,9 +165,12 @@ $ g super-init <directory> [type] [description]
 - `description`: Optional description for the `README.md`.
 
 ### take
-Take is a wrapper around [git clone] but by default clones the submodules too.
-The other feature _take_ provides is to change directory into the newly cloned
-repository, like [oh-my-zsh's take].
+This command is _enhanced_ [git clone]. The `take` after cloning will clone the
+submodules too. As the name suggest, the _CWD_ will be changes as well,
+similarly as the [oh-my-zsh's take].
+
+After cloning and entering the directory, it will run the [git-set-user] command
+for user option setup.
 
 #### Alias
 `ta`
@@ -189,6 +192,7 @@ Available under the [MIT license](LICENSE.md).
 [git global config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---global
 [git help]: https://git-scm.com/docs/git-help
 [git status]: https://git-scm.com/docs/git-status
+[git-set-user]: #set-user
 [gitignore.io]: https://gitignore.io
 [MIT]: https://opensource.org/licenses/MIT
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
