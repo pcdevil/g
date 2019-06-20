@@ -115,6 +115,40 @@ $ git config --get --local user.signingkey
 $
 ```
 
+### super-init
+Initiates a new git repository folder with populated `README.md`, `LICENSE.md`
+and `.gitignore`.
+
+By default the readme file will hold the name of the project and a link to the
+license file. Defining a description as argument will result to fill it the
+readme file with it.
+
+The license will be [MIT].
+
+To make the `.gitignore` file the command will download the content from
+[gitignore.io].
+
+The following templates are applied by default:
+- **Operating systems**: Linux, macOS, Windows
+- **Editors**: IntelliJ+all, Vim, Visual Studio Code
+
+If a _[type]_ is also defined then the appropriate programming language will be
+added to the ignore too. Currently supported languages are `java`, `node`, `php`
+and `rust`.
+
+#### Alias
+`si`
+
+#### Signature
+```zsh
+$ g super-init <directory> [type] [description]
+```
+
+#### Arguments
+- `directory`: The target directory name of the project.
+- `type`: The _"programming language"_ to use for the `.gitignore` file.
+- `description`: Optional description for the `README.md`.
+
 ### take
 Take is a wrapper around [git clone] but by default clones the submodules too.
 The other feature _take_ provides is to change directory into the newly cloned
@@ -155,5 +189,7 @@ Available under the [MIT license](LICENSE.md).
 [git global config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---global
 [git help]: https://git-scm.com/docs/git-help
 [git status]: https://git-scm.com/docs/git-status
+[gitignore.io]: https://gitignore.io
+[MIT]: https://opensource.org/licenses/MIT
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 [url match functionality]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---get-urlmatchnameURL
