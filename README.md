@@ -3,12 +3,19 @@ a simple git wrapper to extend it with a few basic commands.
 
 ## Install
 
-1. Clone the repositoy to a desired folder
+### Prerequirements
+- unix-like system
+- [git]
+- [zsh]
+
+### Steps
+
+1. Clone the repositoy to a desired folder:
 ```zsh
 $ git clone git@github.com:pcdevil/g.git ~/.g
 ```
 
-2. Bootstrap it in your `.zshrc`
+2. Bootstrap it in your `.zshrc`:
 ```zsh
 # Export the destionation folder as G_DIR variable
 export G_DIR=$HOME/.g
@@ -17,6 +24,8 @@ export PATH=$G_DIR/bin:$PATH
 # Load the init script of g
 source $G_DIR/g.plugin.zsh
 ```
+
+3. Reload the terminal.
 
 ## Features
 
@@ -189,6 +198,7 @@ $ g take <repository_url> [directory]
 ## License
 Available under the [MIT license](LICENSE.md).
 
+[git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone
 [git config]: https://git-scm.com/docs/git-config
 [git global config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---global
@@ -199,3 +209,4 @@ Available under the [MIT license](LICENSE.md).
 [MIT]: https://opensource.org/licenses/MIT
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 [url match functionality]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---get-urlmatchnameURL
+[zsh]: http://www.zsh.org/
