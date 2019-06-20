@@ -79,7 +79,7 @@ function create_commit {
 	local name="$1"
 
 	git add .
-	git commit --message="chore($name): initial commit"
+	git commit --message="build($name): initial commit"
 }
 
 name="$1"
