@@ -39,7 +39,7 @@ function create_gitignore {
 	local type="$1"
 	local baseUrl="https://www.gitignore.io/api/"
 
-	local osIgnores=(linux osx windows)
+	local osIgnores=(linux macos windows)
 
 	local editorIgnores=(intellij+all vim visualstudiocode)
 
