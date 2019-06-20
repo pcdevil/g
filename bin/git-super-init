@@ -40,7 +40,9 @@ function create_gitignore {
 	local baseUrl="https://www.gitignore.io/api/"
 
 	local osIgnores=(linux osx windows)
+
 	local editorIgnores=(intellij+all vim visualstudiocode)
+
 	local javaIgnores=(java maven)
 	local nodeIgnores=(node)
 	local phpIgnores=(composer)
