@@ -1,5 +1,5 @@
 # g
-a (very) simple git helper
+a simple git wrapper to extend it with a few basic commands.
 
 ## Install
 
