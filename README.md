@@ -12,6 +12,8 @@ $ git clone git@github.com:pcdevil/g.git ~/.g
 ```zsh
 # Export the destionation folder as G_DIR variable
 export G_DIR=$HOME/.g
+# Add bin folder to the PATH
+export PATH=$G_DIR/bin:$PATH
 # Load the init script of g
 source $G_DIR/g.plugin.zsh
 ```
