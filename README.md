@@ -1,5 +1,6 @@
 # g
-a git wrapper to extend it with a few commands.
+a git wrapper to extend it with a few commands. See detailed functionality in
+the **[Features]** section!
 
 ## Install
 
@@ -199,6 +200,7 @@ $ g take <repository_url> [directory]
 ## License
 Available under the [MIT license](LICENSE.md).
 
+[Features]: #feature
 [git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone
 [git config]: https://git-scm.com/docs/git-config
