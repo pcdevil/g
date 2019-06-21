@@ -36,6 +36,8 @@ convenient alias for `git`.
 Calling it without arguments executes the [git status] itself if the _CWD_ is a
 git repository, otherwise calls the [git help] command.
 
+---
+
 ### cd
 Similarly to the built-in `cd` command, this changes the current directory too
 but it jumps to a directory relative to the git root. It can be handy if your
@@ -49,6 +51,8 @@ $ g cd <directory>
 
 #### Arguments
 - `directory`: The directory path where to jump
+
+---
 
 ### set-user
 Sets the username locally in the repository by reading it from the corresponding
@@ -142,6 +146,8 @@ $ git config --get --local user.signingkey
 $
 ```
 
+---
+
 ### super-init
 Initiates a new git repository folder with populated `README.md`, `LICENSE.md`
 and `.gitignore`.
@@ -176,6 +182,8 @@ $ g super-init <directory> [type] [description]
 - `directory`: The target directory name of the project.
 - `type`: The _"programming language"_ to use for the `.gitignore` file.
 - `description`: Optional description for the `README.md`.
+
+---
 
 ### take
 This command is _enhanced_ [git clone]. The `take` after cloning will clone the
