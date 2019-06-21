@@ -80,7 +80,7 @@ $ g set-user [repository_url]
 
 #### Setup
 For proper working you have to add more options to the [git global config].
-There is a way to do it by git commands but (it's not pretty):
+There is a way to do it by git commands (but it's not pretty):
 ```zsh
 $ git config --global 'user.https://github.com.email' 'jakab@gipsz.eu'
 $
@@ -200,7 +200,7 @@ $ g take <repository_url> [directory]
 ## License
 Available under the [MIT license](LICENSE.md).
 
-[Features]: #feature
+[Features]: #features
 [git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone
 [git config]: https://git-scm.com/docs/git-config
