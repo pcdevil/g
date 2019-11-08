@@ -60,8 +60,6 @@ function extend_gitignore {
 	(
 		echo
 		echo "### Project ###"
-		echo "/dist/**"
-		echo "!/dist/.gitkeep"
 		echo "/tmp/**"
 		echo "!/tmp/.gitkeep"
 		echo ".env"
@@ -94,6 +92,5 @@ create_gitignore "$type"
 extend_gitignore
 
 create_ignored-folder tmp
-create_ignored-folder dist
 
 create_commit "$name"
