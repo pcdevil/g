@@ -13,7 +13,7 @@ the **[Features]** section!
   - **[set-user]**
   - **[super-init]**
   - **[take]**
-
+- **[License]**
 
 ---
 
@@ -269,6 +269,7 @@ Available under the [MIT license](LICENSE.md).
 [git-set-user]: #set-user
 [gitignore.io]: https://gitignore.io
 [Install]: #install
+[License]: #license
 [MIT]: https://opensource.org/licenses/MIT
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 [Prerequirements]: #prerequirements
