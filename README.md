@@ -38,6 +38,37 @@ git repository, otherwise calls the [git help] command.
 
 ---
 
+### angular-commit
+Creates a commit in compliance with the [Angular's Commit Message Guidelines].
+
+#### Alias
+`ng-ci`
+
+#### Signature
+```zsh
+$ g angular-commit <type> <scope> <message>
+```
+
+#### Arguments
+- `type`: The type part of the commit message, which is [described in the
+  guideline here].
+- `scope`: The scope part of the commit message.
+- `message`: The subject and body part of the commit message.
+
+#### Advanced use
+In order to use this feature more conviently, it's advised to create aliases for
+commonly used types in the [git config], for example:
+```zsh
+$ git config --global alias.ng-ci-feat '!git-angular-commit feat'
+$ git config --global alias.ng-ci-fix '!git-angular-commit fix'
+$ git config --global alias.ng-ci-test '!git-angular-commit test'
+```
+
+_Note_: If you prefer, you can edit the config manually to achieve the same
+result.
+
+---
+
 ### cd
 Similarly to the built-in `cd` command, this changes the current directory too
 but it jumps to a directory relative to the git root. It can be handy if your
@@ -208,6 +239,8 @@ $ g take <repository_url> [directory]
 ## License
 Available under the [MIT license](LICENSE.md).
 
+[Angular's Commit Message Guidelines]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines
+[described in the guideline here]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
 [Features]: #features
 [git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone

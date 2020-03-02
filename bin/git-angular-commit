@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+type="$1"
+scope="$2"
+subject="${@:3}"
+
+if [[ -n "$scope" ]]; then
+	message="$type($scope): $subject"
+else
+	message="$type: $subject"
+fi
+
+git commit --message "$message"
