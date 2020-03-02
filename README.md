@@ -2,6 +2,21 @@
 a git wrapper to extend it with a few commands. See detailed functionality in
 the **[Features]** section!
 
+### Table of Contents
+- **[Install]**
+  - **[Prerequirements]**
+  - **[Steps]**
+- **[Features]**
+  - **[g]**
+  - **[angular-commit]**
+  - **[cd]**
+  - **[set-user]**
+  - **[super-init]**
+  - **[take]**
+
+
+---
+
 ## Install
 
 ### Prerequirements
@@ -239,9 +254,12 @@ $ g take <repository_url> [directory]
 ## License
 Available under the [MIT license](LICENSE.md).
 
+[angular-commit]: #angular-commit
 [Angular's Commit Message Guidelines]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines
+[cd]: #cd
 [described in the guideline here]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
 [Features]: #features
+[g]: #g-1
 [git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone
 [git config]: https://git-scm.com/docs/git-config
@@ -250,7 +268,13 @@ Available under the [MIT license](LICENSE.md).
 [git status]: https://git-scm.com/docs/git-status
 [git-set-user]: #set-user
 [gitignore.io]: https://gitignore.io
+[Install]: #install
 [MIT]: https://opensource.org/licenses/MIT
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
+[Prerequirements]: #prerequirements
+[set-user]: #set-user
+[Steps]: #steps
+[super-init]: #super-init
+[take]: #take
 [url match functionality]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---get-urlmatchnameURL
 [zsh]: http://www.zsh.org/
