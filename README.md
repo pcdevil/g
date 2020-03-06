@@ -79,6 +79,15 @@ $ git config --global alias.ng-ci-fix '!git-angular-commit fix'
 $ git config --global alias.ng-ci-test '!git-angular-commit test'
 ```
 
+This will add new sections to the `~/.gitconfig` file with the following
+content:
+```gitconfig
+[alias]
+ng-ci-feat = !git-angular-commit feat
+ng-ci-fix = !git-angular-commit fix
+ng-ci-test = !git-angular-commit test
+```
+
 _Note_: If you prefer, you can edit the config manually to achieve the same
 result.
 
