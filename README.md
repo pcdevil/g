@@ -261,7 +261,7 @@ $ g take <repository_url> [directory]
 - `directory`: Optional, the output directory where to clone
 
 ## License
-Available under the [MIT license](LICENSE.md).
+Available under the [MIT license].
 
 [angular-commit]: #angular-commit
 [Angular's Commit Message Guidelines]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines
@@ -280,6 +280,7 @@ Available under the [MIT license](LICENSE.md).
 [Install]: #install
 [License]: #license
 [MIT]: https://opensource.org/licenses/MIT
+[MIT license]: LICENSE.md
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 [Prerequirements]: #prerequirements
 [set-user]: #set-user
