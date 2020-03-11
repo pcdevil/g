@@ -36,6 +36,8 @@
 # .idea/modules.xml
 # .idea/*.iml
 # .idea/modules
+# *.iml
+# *.ipr
 
 # CMake
 cmake-build-*/
@@ -69,9 +71,6 @@ fabric.properties
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
-
-# JetBrains templates
-**___jb_tmp___
 
 ### Intellij+all Patch ###
 # Ignores the whole .idea folder and all .iml files
@@ -142,13 +141,19 @@ Temporary Items
 
 # Session
 Session.vim
+Sessionx.vim
 
 # Temporary
 .netrwhist
+
 # Auto-generated tag files
 tags
+
 # Persistent undo
 [._]*.un~
+
+# Coc configuration directory
+.vim
 
 ### VisualStudioCode ###
 .vscode/*
@@ -164,6 +169,7 @@ tags
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
+Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
