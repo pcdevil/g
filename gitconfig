@@ -1,0 +1,55 @@
+[alias]
+	## ABBREVIATION ALIASES ##
+	br = branch
+	cl = clone
+	d = diff
+	me = merge
+	ph = push
+	pl = pull
+	re = restore
+	sh = show
+	st = status
+	sw = switch
+
+	## BASIC ALIASES ##
+	# add file chunks interactively
+	a = add --patch
+	# set file as intended to add
+	a-f = add --intent-to-add
+	# amend last commit
+	ci-a = commit --amend
+	# amend last commit and use the same message
+	ci-as = commit --amend --no-edit
+	# angular commit aliases
+	ci-build = !git-angular-commit build
+	ci-docs = !git-angular-commit docs
+	ci-feat = !git-angular-commit feat
+	ci-fix = !git-angular-commit fix
+	ci-perf = !git-angular-commit perf
+	ci-refactor = !git-angular-commit refactor
+	ci-style = !git-angular-commit style
+	ci-test = !git-angular-commit test
+	# show staged changes
+	d-s = diff --staged
+	# download references from all remote and remove any local reference that no longer exist
+	f = fetch --prune --all
+	# merge and always create merge commit
+	me-m = merge --no-ff
+	# merge and use suggested message
+	me-s = merge --no-edit
+	# merge and always create merge commit with suggested message
+	me-ms = merge --no-ff --no-edit
+	# restore staged changes
+	re-s = restore --staged
+	# switches to master branch
+	sw-m = switch master
+
+	## ADVANCED ALIASES ##
+	# one liner compact log
+	l = log --pretty=format:'%C(bold red)%h%Creset  %ad  %C(bold white)%aN%Creset  %s  %C(yellow)%D%Creset'
+	# push with upstream setup
+	ph-o = "!f () { branch=`git rev-parse --abbrev-ref HEAD`; git push --set-upstream origin $branch; }; f"
+	# performs a staged and a worktree restore
+	re-2 = "!f () { git restore --staged \"$@\"; git restore --worktree \"$@\"; }; f"
+	# very resiliant commit with message support only
+	ci = "!f() { message=\"$@\"; git commit --allow-empty --allow-empty-message --message \"$message\"; }; f"

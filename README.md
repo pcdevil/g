@@ -6,6 +6,10 @@ the **[Features]** section!
 - **[Install]**
   - **[Prerequirements]**
   - **[Steps]**
+- **[Predefined git config]**
+  - **[Abbreviation aliases]**
+  - **[Basic aliases]**
+  - **[Advanced aliases]**
 - **[Features]**
   - **[g]**
   - **[angular-commit]**
@@ -21,7 +25,7 @@ the **[Features]** section!
 
 ### Prerequirements
 - unix-like system
-- [git]
+- [git] (minimum: v1.7+, recommended: v2.23+)
 - [zsh]
 
 ### Steps
@@ -41,7 +45,87 @@ export PATH=$G_DIR/bin:$PATH
 source $G_DIR/g.plugin.zsh
 ```
 
-3. Reload the terminal.
+3. (Optional) Install `gitconfig`:
+```zsh
+$ git config --global --add include.path ~/.g/gitconfig
+```
+
+__See **[Predefined git config]** section for more information about it.__
+
+4. Reload the terminal.
+
+## Predefined git config
+The project provides an optional `gitconfig` to extend the default **git**
+config. Currently it only contains aliases, which can be sorted into three
+categories, listed below.
+
+### Abbreviation aliases
+Abbreviation aliases are very simple: their purpose to give quicker access to a
+specific git command.
+
+| Alias command | **git** command |
+| ------------- | --------------- |
+| `br`          | `git branch`    |
+| `cl`          | `git clone`     |
+| `d`           | `git diff`      |
+| `me`          | `git merge`     |
+| `ph`          | `git push`      |
+| `pl`          | `git pull`      |
+| `re`          | `git restore`   |
+| `sh`          | `git show`      |
+| `st`          | `git status`    |
+| `sw`          | `git switch`    |
+
+_Note_: [git restore] and [git switch] only available since **git** v2.23, below
+thaat the `re` and the `sw` alias produces error!
+
+_Note_: All features of `g` also have an abbreviation alias, which described in
+the their respective descriptions.
+
+### Basic aliases
+Basic aliases give flavour for everyday situation usages, while they still keep
+the durability of the base command and allow free parametrisation for them.
+
+| Alias command | **git** command          | Description                                                                             |
+| ------------- | ------------------------ | --------------------------------------------------------------------------------------- |
+| a             | add --patch              | Add file chunks interactively                                                           |
+| a-f           | add --intent-to-add      | Set file as intended to add                                                             |
+| ci-a          | commit --amend           | Amend last commit                                                                       |
+| ci-as         | commit --amend --no-edit | Amend last commit and use the same message                                              |
+| d-s           | diff --staged            | Show staged changes                                                                     |
+| f             | fetch --prune --all      | Download references from all remote and remove any local reference that no longer exist |
+| me-m          | merge --no-ff            | Merge and always create merge commit                                                    |
+| me-s          | merge --no-edit          | Merge and use suggested message                                                         |
+| me-ms         | merge --no-ff --no-edit  | Merge and always create merge commit with suggested message                             |
+| re-s          | restore --staged         | Restore staged changes                                                                  |
+| sw-m          | switch master            | Switch to master branch                                                                 |
+
+While [angular-commit] is not a standard **git** command, basic aliases are also
+provided for it out of the box.
+
+| Alias command | **angular-commit** command  |
+| ------------- | --------------------------- |
+| ci-build      | git-angular-commit build    |
+| ci-docs       | git-angular-commit docs     |
+| ci-feat       | git-angular-commit feat     |
+| ci-fix        | git-angular-commit fix      |
+| ci-perf       | git-angular-commit perf     |
+| ci-refactor   | git-angular-commit refactor |
+| ci-style      | git-angular-commit style    |
+| ci-test       | git-angular-commit test     |
+
+### Advanced aliases
+Contrary to the previous alias types, advanced aliases are designed to give
+solution in a strict situation without taking account other type of application.
+See the "Notes" section how they allow parametrisation for the underlying
+**git** command!
+
+| Alias command | Description                                                           | Notes                                                           |
+| ------------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
+| l             | Print a coloured, compact one-liner log                               | Only `--pretty=format` used, any other [git log] argument works |
+| ph-o          | Set upstream to origin and push the current branch                    | Doesn't take any argument                                       |
+| re-2          | Restore both staged and unstaged changes                              | Any argument is passed through to [git restore]                 |
+| ci            | Quick commit where neither the changes, nor the message are mandatory | Any argument will be passed as message to [git commit]          |
 
 ## Features
 
@@ -90,6 +174,9 @@ ng-ci-test = !git-angular-commit test
 
 _Note_: If you prefer, you can edit the config manually to achieve the same
 result.
+
+_Note 2_: Command aliases are available in the predefined git config as [basic
+aliases] too without the `ng` prefix.
 
 ---
 
@@ -263,18 +350,26 @@ $ g take <repository_url> [directory]
 ## License
 Available under the [MIT license].
 
+[Abbreviation aliases]: #abbreviation-aliases
+[Advanced aliases]: #advanced-aliases
 [angular-commit]: #angular-commit
 [Angular's Commit Message Guidelines]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines
+[Basic aliases]: #basic-aliases
+[basic aliases]: #basic-aliases
 [cd]: #cd
 [described in the guideline here]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
 [Features]: #features
 [g]: #g-1
 [git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone
+[git commit]: https://git-scm.com/docs/git-commit
 [git config]: https://git-scm.com/docs/git-config
 [git global config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---global
 [git help]: https://git-scm.com/docs/git-help
+[git log]: https://git-scm.com/docs/git-log
+[git restore]: https://git-scm.com/docs/git-restore
 [git status]: https://git-scm.com/docs/git-status
+[git switch]: https://git-scm.com/docs/git-switch
 [git-set-user]: #set-user
 [gitignore.io]: https://gitignore.io
 [Install]: #install
@@ -282,6 +377,7 @@ Available under the [MIT license].
 [MIT]: https://opensource.org/licenses/MIT
 [MIT license]: LICENSE.md
 [oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
+[Predefined git config]: #predefined-git-config
 [Prerequirements]: #prerequirements
 [set-user]: #set-user
 [Steps]: #steps
