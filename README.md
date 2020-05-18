@@ -29,28 +29,27 @@ See detailed functionality in the **[Features]** section!
 - [zsh]
 
 ### Steps
-
 1. Clone the repositoy to a desired folder:
-```zsh
-$ git clone git@github.com:pcdevil/g.git ~/.g
-```
+    ```zsh
+    $ git clone git@github.com:pcdevil/g.git ~/.g
+    ```
 
 2. Bootstrap it in your `.zshrc`:
-```zsh
-# Export the destionation folder as G_DIR variable
-export G_DIR=$HOME/.g
-# Add bin folder to the PATH
-export PATH=$G_DIR/bin:$PATH
-# Load the init script of g
-source $G_DIR/g.plugin.zsh
-```
+    ```zsh
+    # Export the destionation folder as G_DIR variable
+    export G_DIR=$HOME/.g
+    # Add bin folder to the PATH
+    export PATH=$G_DIR/bin:$PATH
+    # Load the init script of g
+    source $G_DIR/g.plugin.zsh
+    ```
 
 3. (Optional) Install `gitconfig`:
-```zsh
-$ git config --global --add include.path ~/.g/gitconfig
-```
+    ```zsh
+    $ git config --global --add include.path ~/.g/gitconfig
+    ```
 
-__See **[Predefined git config]** section for more information about it.__
+    __See **[Predefined git config]** section for more information about it.__
 
 4. Reload the terminal.
 
