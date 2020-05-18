@@ -1,6 +1,6 @@
 # g
-a git wrapper to extend it with a few commands. See detailed functionality in
-the **[Features]** section!
+A wrapper around **git** with additional feature extension.
+See detailed functionality in the **[Features]** section!
 
 ### Table of Contents
 - **[Install]**
