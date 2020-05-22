@@ -209,8 +209,9 @@ When reading the configurations, `set-user` strips down the url and only works
 with the _PROTOCOL + DOMAIN + TLD_ triple. If there is no match for the given
 url it will fall back to the default values.
 
-The `set-user` can turn on GPG signing for the repository too. To enable this
-functionality set the `user.signingkey` alongside with the other options.
+The `set-user` can turn on GPG signing for the repository too if the
+`user.signingkey` config is set. Once is enabled, `set-user` will sets
+`gpg.program` and `commit.gpgsign` configs too for the repository.
 
 #### Alias
 `su`
