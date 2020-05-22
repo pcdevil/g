@@ -64,16 +64,16 @@ specific git command.
 
 | Alias command | **git** command |
 | ------------- | --------------- |
-| `br`          | `git branch`    |
-| `cl`          | `git clone`     |
-| `d`           | `git diff`      |
-| `me`          | `git merge`     |
-| `ph`          | `git push`      |
-| `pl`          | `git pull`      |
-| `re`          | `git restore`   |
-| `sh`          | `git show`      |
-| `st`          | `git status`    |
-| `sw`          | `git switch`    |
+| `g br`        | `git branch`    |
+| `g cl`        | `git clone`     |
+| `g d`         | `git diff`      |
+| `g me`        | `git merge`     |
+| `g ph`        | `git push`      |
+| `g pl`        | `git pull`      |
+| `g re`        | `git restore`   |
+| `g sh`        | `git show`      |
+| `g st`        | `git status`    |
+| `g sw`        | `git switch`    |
 
 _Note_: [git restore] and [git switch] only available since **git** v2.23, below
 thaat the `re` and the `sw` alias produces error!
@@ -85,33 +85,33 @@ the their respective descriptions.
 Basic aliases give flavour for everyday situation usages, while they still keep
 the durability of the base command and allow free parametrisation for them.
 
-| Alias command | **git** command          | Description                                                                             |
-| ------------- | ------------------------ | --------------------------------------------------------------------------------------- |
-| a             | add --patch              | Add file chunks interactively                                                           |
-| a-f           | add --intent-to-add      | Set file as intended to add                                                             |
-| ci-a          | commit --amend           | Amend last commit                                                                       |
-| ci-as         | commit --amend --no-edit | Amend last commit and use the same message                                              |
-| d-s           | diff --staged            | Show staged changes                                                                     |
-| f             | fetch --prune --all      | Download references from all remote and remove any local reference that no longer exist |
-| me-m          | merge --no-ff            | Merge and always create merge commit                                                    |
-| me-s          | merge --no-edit          | Merge and use suggested message                                                         |
-| me-ms         | merge --no-ff --no-edit  | Merge and always create merge commit with suggested message                             |
-| re-s          | restore --staged         | Restore staged changes                                                                  |
-| sw-m          | switch master            | Switch to master branch                                                                 |
+| Alias command | **git** command                | Description                                                                             |
+| ------------- | ------------------------------ | --------------------------------------------------------------------------------------- |
+| `g a`         | `git add --patch`              | Add file chunks interactively                                                           |
+| `g a-f`       | `git add --intent-to-add`      | Set file as intended to add                                                             |
+| `g ci-a`      | `git commit --amend`           | Amend last commit                                                                       |
+| `g ci-as`     | `git commit --amend --no-edit` | Amend last commit and use the same message                                              |
+| `g d-s`       | `git diff --staged`            | Show staged changes                                                                     |
+| `g f`         | `git fetch --prune --all`      | Download references from all remote and remove any local reference that no longer exist |
+| `g me-m`      | `git merge --no-ff`            | Merge and always create merge commit                                                    |
+| `g me-s`      | `git merge --no-edit`          | Merge and use suggested message                                                         |
+| `g me-ms`     | `git merge --no-ff --no-edit`  | Merge and always create merge commit with suggested message                             |
+| `g re-s`      | `git restore --staged`         | Restore staged changes                                                                  |
+| `g sw-m`      | `git switch master`            | Switch to master branch                                                                 |
 
 While [angular-commit] is not a standard **git** command, basic aliases are also
 provided for it out of the box.
 
-| Alias command | **angular-commit** command  |
-| ------------- | --------------------------- |
-| ci-build      | git-angular-commit build    |
-| ci-docs       | git-angular-commit docs     |
-| ci-feat       | git-angular-commit feat     |
-| ci-fix        | git-angular-commit fix      |
-| ci-perf       | git-angular-commit perf     |
-| ci-refactor   | git-angular-commit refactor |
-| ci-style      | git-angular-commit style    |
-| ci-test       | git-angular-commit test     |
+| Alias command   | **angular-commit** command    |
+| --------------- | ----------------------------- |
+| `g ci-build`    | `git-angular-commit build`    |
+| `g ci-docs`     | `git-angular-commit docs`     |
+| `g ci-feat`     | `git-angular-commit feat`     |
+| `g ci-fix`      | `git-angular-commit fix`      |
+| `g ci-perf`     | `git-angular-commit perf`     |
+| `g ci-refactor` | `git-angular-commit refactor` |
+| `g ci-style`    | `git-angular-commit style`    |
+| `g ci-test`     | `git-angular-commit test`     |
 
 ### Advanced aliases
 Contrary to the previous alias types, advanced aliases are designed to give
@@ -121,10 +121,10 @@ See the "Notes" section how they allow parametrisation for the underlying
 
 | Alias command | Description                                                           | Notes                                                           |
 | ------------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| l             | Print a coloured, compact one-liner log                               | Only `--pretty=format` used, any other [git log] argument works |
-| ph-o          | Set upstream to origin and push the current branch                    | Doesn't take any argument                                       |
-| re-2          | Restore both staged and unstaged changes                              | Any argument is passed through to [git restore]                 |
-| ci            | Quick commit where neither the changes, nor the message are mandatory | Any argument will be passed as message to [git commit]          |
+| `g l`         | Print a coloured, compact one-liner log                               | Only `--pretty=format` used, any other [git log] argument works |
+| `g ph-o`      | Set upstream to origin and push the current branch                    | Doesn't take any argument                                       |
+| `g re-2`      | Restore both staged and unstaged changes                              | Any argument is passed through to [git restore]                 |
+| `g ci`        | Quick commit where neither the changes, nor the message are mandatory | Any argument will be passed as message to [git commit]          |
 
 ## Features
 
