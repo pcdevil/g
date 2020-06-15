@@ -328,8 +328,8 @@ $ g super-init <directory> [type] [description]
 ---
 
 ### take
-This command is _enhanced_ [git clone]. The `take` after cloning will clone the
-submodules too. As the name suggest, the _CWD_ will be changes as well,
+This command is an _enhanced_ [git clone]. The `take` after cloning will clone
+the submodules too. As the name suggest, the _CWD_ will be changes as well,
 similarly as the [oh-my-zsh's take].
 
 After cloning and entering the directory, it will run the [git-set-user] command
