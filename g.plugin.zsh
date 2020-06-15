@@ -17,6 +17,7 @@ function git {
 		ng-ci|angular-commit) gitCommand=git-angular-commit ;;
 		si|super-init)        gitCommand=git-super-init ;;
 		su|set-user)          gitCommand=git-set-user ;;
+		sw-m|switch-main)     gitCommand=git-switch-main ;;
 		ta|take)              gitCommand=git-take ;;
 	esac
 

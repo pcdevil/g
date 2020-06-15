@@ -16,6 +16,7 @@ See detailed functionality in the **[Features]** section!
   - **[cd]**
   - **[set-user]**
   - **[super-init]**
+  - **[switch-main]**
   - **[take]**
 - **[License]**
 
@@ -97,7 +98,6 @@ the durability of the base command and allow free parametrisation for them.
 | `g me-s`      | `git merge --no-edit`          | Merge and use suggested message                                                         |
 | `g me-ms`     | `git merge --no-ff --no-edit`  | Merge and always create merge commit with suggested message                             |
 | `g re-s`      | `git restore --staged`         | Restore staged changes                                                                  |
-| `g sw-m`      | `git switch master`            | Switch to master branch                                                                 |
 
 While [angular-commit] is not a standard **git** command, basic aliases are also
 provided for it out of the box.
@@ -312,6 +312,9 @@ If a _[type]_ is also defined then the appropriate programming language will be
 added to the ignore too. Currently supported languages are `java`, `node`, `php`
 and `rust`.
 
+The [switch-main] command will be also called with the create flag, ensuring the
+correct branch name by default from the first commit.
+
 #### Alias
 `si`
 
@@ -324,6 +327,42 @@ $ g super-init <directory> [type] [description]
 - `directory`: The target directory name of the project.
 - `type`: The _"programming language"_ to use for the `.gitignore` file.
 - `description`: Optional description for the `README.md`.
+
+---
+
+### switch-main
+The `switch-main` command provides a clean way to change the current branch to
+the default `main`. The command is created in the notion to avoid the usage of
+the `master` naming for branch, which is [considered as oppressive phrasing] and
+suggested to use alternatives.
+
+#### Alias
+`sw-m`
+
+#### Signature
+```zsh
+$ g switch-main [-c|--create]
+```
+
+#### Arguments
+- `-c|--create`: Creates the default branch. Useful during repository migration.
+
+#### Advanced use
+The default branch name is `main`, but for legacy reasons, or in special cases
+such as [GitHub Pages] when the default branch is `gh-pages` you can change it
+by modifying the `branch.default` git config:
+
+```zsh
+$ # in a GitHub Pages project
+$ git rev-parse --abbrev-ref HEAD
+feat/add-contact-info
+$ git config --local branch.default gh-pages
+$ g switch-main
+$ git rev-parse --abbrev-ref HEAD
+gh-pages
+```
+
+_Note_: This can be overwritten globally via the `git config --global` command.
 
 ---
 
@@ -357,6 +396,7 @@ Available under the [MIT license].
 [Basic aliases]: #basic-aliases
 [basic aliases]: #basic-aliases
 [cd]: #cd
+[considered as oppressive phrasing]: https://tools.ietf.org/id/draft-knodel-terminology-00.html#rfc.section.1.1
 [described in the guideline here]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
 [Features]: #features
 [g]: #g-1
@@ -371,6 +411,7 @@ Available under the [MIT license].
 [git status]: https://git-scm.com/docs/git-status
 [git switch]: https://git-scm.com/docs/git-switch
 [git-set-user]: #set-user
+[GitHub Pages]: https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site
 [gitignore.io]: https://gitignore.io
 [Install]: #install
 [License]: #license
@@ -382,6 +423,7 @@ Available under the [MIT license].
 [set-user]: #set-user
 [Steps]: #steps
 [super-init]: #super-init
+[switch-main]: #switch-main
 [take]: #take
 [url match functionality]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---get-urlmatchnameURL
 [zsh]: http://www.zsh.org/

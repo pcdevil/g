@@ -41,8 +41,6 @@
 	me-ms = merge --no-ff --no-edit
 	# restore staged changes
 	re-s = restore --staged
-	# switches to master branch
-	sw-m = switch master
 
 	## ADVANCED ALIASES ##
 	# one liner compact log

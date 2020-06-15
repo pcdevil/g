@@ -6,6 +6,7 @@ function create_folder {
 	mkdir --parents "$name"
 	cd "$name"
 	git init
+	git-switch-main --create
 }
 
 function create_license {
