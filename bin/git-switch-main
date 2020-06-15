@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-defaultBranch=$(git config branch.default)
+defaultBranch=$(git config branch.default || echo "main")
 
 newBranchFlag=
 if [ "$1" = "-c" -o "$1" = "--create" ]; then
