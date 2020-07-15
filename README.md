@@ -137,7 +137,7 @@ git repository, otherwise calls the [git help] command.
 ---
 
 ### angular-commit
-Creates a commit in compliance with the [Angular's Commit Message Guidelines].
+Creates a commit in compliance with the [Angular's Commit Message Format].
 
 #### Alias
 `ng-ci`
@@ -392,7 +392,7 @@ Available under the [MIT license].
 [Abbreviation aliases]: #abbreviation-aliases
 [Advanced aliases]: #advanced-aliases
 [angular-commit]: #angular-commit
-[Angular's Commit Message Guidelines]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-guidelines
+[Angular's Commit Message Format]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
 [Basic aliases]: #basic-aliases
 [basic aliases]: #basic-aliases
 [cd]: #cd
