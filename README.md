@@ -9,6 +9,7 @@ See detailed functionality in the **[Features]** section!
 - **[Predefined git config]**
   - **[Abbreviation aliases]**
   - **[Basic aliases]**
+  - **[Angular commit aliases]**
   - **[Advanced aliases]**
 - **[Features]**
   - **[g]**
@@ -99,6 +100,8 @@ the durability of the base command and allow free parametrisation for them.
 | `g me-ms`     | `git merge --no-ff --no-edit`  | Merge and always create merge commit with suggested message                             |
 | `g re-s`      | `git restore --staged`         | Restore staged changes                                                                  |
 
+### Angular commit aliases
+
 While [angular-commit] is not a standard **git** command, basic aliases are also
 provided for it out of the box.
 
@@ -174,8 +177,8 @@ ng-ci-test = !git-angular-commit test
 _Note_: If you prefer, you can edit the config manually to achieve the same
 result.
 
-_Note 2_: Command aliases are available in the predefined git config as [basic
-aliases] too without the `ng` prefix.
+_Note 2_: Command aliases are available in the predefined git config as [Angular
+commit aliases] too without the `ng` prefix.
 
 ---
 
@@ -392,6 +395,7 @@ Available under the [MIT license].
 [Abbreviation aliases]: #abbreviation-aliases
 [Advanced aliases]: #advanced-aliases
 [angular-commit]: #angular-commit
+[Angular commit aliases]: #angular-commit-aliases
 [Angular's Commit Message Format]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
 [Basic aliases]: #basic-aliases
 [basic aliases]: #basic-aliases
