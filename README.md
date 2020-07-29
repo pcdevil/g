@@ -351,15 +351,16 @@ $ g switch-main [-c|--create]
 - `-c|--create`: Creates the default branch. Useful during repository migration.
 
 #### Advanced use
-The default branch name is `main`, but for legacy reasons, or in special cases
-such as [GitHub Pages] when the default branch is `gh-pages` you can change it
-by modifying the `branch.default` git config:
+The default branch name is `main`, but for legacy reasons there is also an
+option to modify what is considered to be the _main branch_: because **git**
+also supports default branches (since 2.28.0) with [`init.defaultBranch` git
+config], this command also relies on that:
 
 ```zsh
 $ # in a GitHub Pages project
 $ git rev-parse --abbrev-ref HEAD
 feat/add-contact-info
-$ git config --local branch.default gh-pages
+$ git config --local init.defaultBranch gh-pages
 $ g switch-main
 $ git rev-parse --abbrev-ref HEAD
 gh-pages
@@ -417,6 +418,7 @@ Available under the [MIT license].
 [git-set-user]: #set-user
 [GitHub Pages]: https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site
 [gitignore.io]: https://gitignore.io
+[`init.defaultBranch` git config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt-initdefaultBranch
 [Install]: #install
 [License]: #license
 [MIT]: https://opensource.org/licenses/MIT
