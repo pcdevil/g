@@ -74,7 +74,6 @@ specific git command.
 | `g pl`        | `git pull`      |
 | `g re`        | `git restore`   |
 | `g sh`        | `git show`      |
-| `g st`        | `git status`    |
 | `g sw`        | `git switch`    |
 
 _Note_: [git restore] and [git switch] only available since **git** v2.23, below

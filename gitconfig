@@ -8,7 +8,6 @@
 	pl = pull
 	re = restore
 	sh = show
-	st = status
 	sw = switch
 
 	## BASIC ALIASES ##
