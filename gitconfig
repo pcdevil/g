@@ -8,6 +8,7 @@
 	pl = pull
 	re = restore
 	sh = show
+	st = stash
 	sw = switch
 
 	## BASIC ALIASES ##
@@ -40,6 +41,10 @@
 	me-ms = merge --no-ff --no-edit
 	# restore staged changes
 	re-s = restore --staged
+	# move staged, dirty and untracked files into stash
+	st-a = stash push --all
+	# move uppermost changes from stash into working directory
+	st-pp = stash pop
 
 	## ADVANCED ALIASES ##
 	# one liner compact log
