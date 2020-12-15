@@ -306,7 +306,7 @@ readme file with it.
 The license will be [MIT].
 
 To make the `.gitignore` file the command will download the content from
-[gitignore.io].
+Toptal's [gitignore.io].
 
 The following templates are applied by default:
 - **Operating systems**: Linux, macOS, Windows
@@ -420,7 +420,7 @@ Available under the [MIT license].
 [git switch]: https://git-scm.com/docs/git-switch
 [git-set-user]: #set-user
 [GitHub Pages]: https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site
-[gitignore.io]: https://gitignore.io
+[gitignore.io]: https://www.toptal.com/developers/gitignore
 [`init.defaultBranch` git config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt-initdefaultBranch
 [Install]: #install
 [License]: #license

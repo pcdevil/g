@@ -38,7 +38,7 @@ function create_readme {
 
 function create_gitignore {
 	local type="$1"
-	local baseUrl="https://www.gitignore.io/api/"
+	local baseUrl="https://www.toptal.com/developers/gitignore/api/"
 
 	local osIgnores=(linux macos windows)
 
