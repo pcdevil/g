@@ -61,7 +61,7 @@ function extend_gitignore {
 	(
 		echo
 		echo "### Project ###"
-		echo "/tmp/**"
+		echo "tmp/*"
 		echo "!/tmp/.gitkeep"
 		echo ".env"
 	) >>.gitignore
