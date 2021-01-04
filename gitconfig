@@ -52,6 +52,6 @@
 	# push with upstream setup
 	ph-o = "!f () { branch=`git rev-parse --abbrev-ref HEAD`; git push --set-upstream origin $branch; }; f"
 	# performs a staged and a worktree restore
-	re-2 = "!f () { git restore --staged \"$@\"; git restore --worktree \"$@\"; }; f"
+	re-2 = restore --staged --worktree --source HEAD
 	# very resiliant commit with message support only
 	ci = "!f() { message=\"$@\"; git commit --allow-empty --allow-empty-message --message \"$message\"; }; f"
