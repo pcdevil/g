@@ -72,9 +72,9 @@ specific git command.
 | `g me`        | `git merge`     |
 | `g ph`        | `git push`      |
 | `g pl`        | `git pull`      |
+| `g q`         | `git stash`     |
 | `g re`        | `git restore`   |
 | `g sh`        | `git show`      |
-| `g st`        | `git stash`     |
 | `g sw`        | `git switch`    |
 
 _Note_: [git restore] and [git switch] only available since **git** v2.23, below
@@ -99,8 +99,8 @@ the durability of the base command and allow free parametrisation for them.
 | `g me-s`      | `git merge --no-edit`          | Merge and use suggested message                                                         |
 | `g me-ms`     | `git merge --no-ff --no-edit`  | Merge and always create merge commit with suggested message                             |
 | `g re-s`      | `git restore --staged`         | Restore staged changes                                                                  |
-| `g st-a`      | `git stash push --all`         | Move staged, dirty and untracked files into stash                                       |
-| `g st-pp`     | `git stash pop`                | Move uppermost changes from stash into working directory                                |
+| `g q-a`       | `git stash push --all`         | Move staged, dirty and untracked files into stash                                       |
+| `g q-p`       | `git stash pop`                | Move uppermost changes from stash into working directory                                |
 
 ### Angular commit aliases
 

@@ -6,9 +6,9 @@
 	me = merge
 	ph = push
 	pl = pull
+	q  = stash
 	re = restore
 	sh = show
-	st = stash
 	sw = switch
 
 	## BASIC ALIASES ##
@@ -39,12 +39,12 @@
 	me-s = merge --no-edit
 	# merge and always create merge commit with suggested message
 	me-ms = merge --no-ff --no-edit
+	# move staged, dirty and untracked files into stash
+	q-a = stash push --all
+	# move uppermost changes from stash into working directory
+	q-p = stash pop
 	# restore staged changes
 	re-s = restore --staged
-	# move staged, dirty and untracked files into stash
-	st-a = stash push --all
-	# move uppermost changes from stash into working directory
-	st-pp = stash pop
 
 	## ADVANCED ALIASES ##
 	# one liner compact log
