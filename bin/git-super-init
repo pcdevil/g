@@ -58,13 +58,7 @@ function create_gitignore {
 }
 
 function extend_gitignore {
-	(
-		echo
-		echo "### Project ###"
-		echo "tmp/*"
-		echo "!.gitkeep"
-		echo ".env"
-	) >>.gitignore
+	cat $G_DIR/assets/gitignore-extension >>.gitignore
 }
 
 function create_ignored-folder {

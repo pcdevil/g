@@ -1,0 +1,9 @@
+
+### Project ###
+# ignore local temporary folder for prototyping
+tmp/*
+# trace every .gitkeep files to maintain directory structure integrity in the repository
+!.gitkeep
+
+# ignore dotenv files to avoid leaking of sensitive configurations of the an application: https://12factor.net/config
+.env
