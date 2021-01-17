@@ -86,6 +86,6 @@ create_readme "$name" "$description"
 create_gitignore "$type"
 extend_gitignore
 
-create_ignored-folder tmp
+create_ignored-folder .tmp
 
 create_commit "$name"
