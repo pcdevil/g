@@ -124,12 +124,13 @@ solution in a strict situation without taking account other type of application.
 See the "Notes" section how they allow parametrisation for the underlying
 **git** command!
 
-| Alias command | Description                                                           | Notes                                                           |
-| ------------- | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| `g l`         | Print a coloured, compact one-liner log                               | Only `--pretty=format` used, any other [git log] argument works |
-| `g ph-o`      | Set upstream to origin and push the current branch                    | Doesn't take any argument                                       |
-| `g re-2`      | Restore both staged and unstaged changes                              | Any argument is passed through to [git restore]                 |
-| `g ci`        | Quick commit where neither the changes, nor the message are mandatory | Any argument will be passed as message to [git commit]          |
+| Alias command | Description                                                           | Notes                                                                                                |
+| ------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `g l`         | Print a coloured, compact one-liner log                               | Only `--pretty=format` used, any other [git log] argument works                                      |
+| `g ph-o`      | Set upstream to origin and push the current branch                    | Doesn't take any argument                                                                            |
+| `g re-2`      | Restore both staged and unstaged changes                              | Any argument is passed through to [git restore]                                                      |
+| `g ci`        | Quick commit where neither the changes, nor the message are mandatory | Any argument will be passed as message to [git commit]                                               |
+| `g q-sh`      | Shows the content of a stash entry                                    | An optional argument can be given and passed as index to the [git stash] _(see description section)_ |
 
 ## Features
 
@@ -416,6 +417,7 @@ Available under the [MIT license].
 [git help]: https://git-scm.com/docs/git-help
 [git log]: https://git-scm.com/docs/git-log
 [git restore]: https://git-scm.com/docs/git-restore
+[git stash]: https://git-scm.com/docs/git-stash
 [git status]: https://git-scm.com/docs/git-status
 [git switch]: https://git-scm.com/docs/git-switch
 [git-set-user]: #set-user

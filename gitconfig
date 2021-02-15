@@ -55,3 +55,5 @@
 	re-2 = restore --staged --worktree --source HEAD
 	# very resiliant commit with message support only
 	ci = "!f() { message=\"$@\"; git commit --allow-empty --allow-empty-message --message \"$message\"; }; f"
+	# shows the content of a stash entry based on index
+	q-sh = "!f() { stashIndex=${1:-0}; git stash show --patch stash@{$stashIndex}; }; f"
