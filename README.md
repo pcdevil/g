@@ -64,18 +64,19 @@ categories, listed below.
 Abbreviation aliases are very simple: their purpose to give quicker access to a
 specific git command.
 
-| Alias command | **git** command |
-| ------------- | --------------- |
-| `g br`        | `git branch`    |
-| `g cl`        | `git clone`     |
-| `g d`         | `git diff`      |
-| `g me`        | `git merge`     |
-| `g ph`        | `git push`      |
-| `g pl`        | `git pull`      |
-| `g q`         | `git stash`     |
-| `g re`        | `git restore`   |
-| `g sh`        | `git show`      |
-| `g sw`        | `git switch`    |
+| Alias command | **git** command                  |
+| ------------- | -------------------------------- |
+| `g ae`        | `git blame` _(as in "annotate")_ |
+| `g br`        | `git branch`                     |
+| `g cl`        | `git clone`                      |
+| `g d`         | `git diff`                       |
+| `g me`        | `git merge`                      |
+| `g ph`        | `git push`                       |
+| `g pl`        | `git pull`                       |
+| `g q`         | `git stash`                      |
+| `g re`        | `git restore`                    |
+| `g sh`        | `git show`                       |
+| `g sw`        | `git switch`                     |
 
 _Note_: [git restore] and [git switch] only available since **git** v2.23, below
 thaat the `re` and the `sw` alias produces error!

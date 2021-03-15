@@ -1,5 +1,6 @@
 [alias]
 	## ABBREVIATION ALIASES ##
+	ae = blame
 	br = branch
 	cl = clone
 	d = diff
