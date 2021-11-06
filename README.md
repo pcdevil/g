@@ -17,7 +17,6 @@ See detailed functionality in the **[Features]** section!
   - **[set-user]**
   - **[super-init]**
   - **[switch-main]**
-  - **[take]**
 - **[License]**
 
 ---
@@ -354,28 +353,6 @@ gh-pages
 ```
 
 _Note_: This can be overwritten globally via the `git config --global` command.
-
----
-
-### take
-This command is an _enhanced_ [git clone]. The `take` after cloning will clone
-the submodules too. As the name suggest, the _CWD_ will be changes as well,
-similarly as the [oh-my-zsh's take].
-
-After cloning and entering the directory, it will run the [git-set-user] command
-for user option setup.
-
-#### Alias
-`ta`
-
-#### Signature
-```zsh
-$ g take <repository_url> [directory]
-```
-
-#### Arguments
-- `repository_url`: The pulled repository's url
-- `directory`: Optional, the output directory where to clone
 
 ## License
 Available under the [MIT license].
