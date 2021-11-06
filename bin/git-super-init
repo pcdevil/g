@@ -1,12 +1,8 @@
 #!/bin/zsh
 
-function create_folder {
-	local name="$1"
-
-	mkdir --parents "$name"
-	cd "$name"
+function init_git_folder {
 	git init
-	git-switch-main --create
+	git switch-main --create
 }
 
 function create_license {
@@ -75,11 +71,11 @@ function create_commit {
 	git commit --message="build($name): initial commit"
 }
 
-name="$1"
-type="$2"
-description="$3"
+name=$(basename $PWD)
+type="$1"
+description="$2"
 
-create_folder "$name"
+init_git_folder
 create_license
 create_readme "$name" "$description"
 

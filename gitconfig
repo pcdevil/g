@@ -60,5 +60,6 @@
 	ci-style = angular-commit style
 	ci-test = angular-commit test
 	ng-ci = angular-commit
+	si = super-init
 	su = set-user
 	sw-m = switch-main

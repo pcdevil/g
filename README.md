@@ -281,8 +281,8 @@ $
 ---
 
 ### super-init
-Initiates a new git repository folder with populated `README.md`, `LICENSE.md`
-and `.gitignore`.
+Initiates a git repository in the current directory and populated `README.md`,
+`LICENSE.md` and `.gitignore` files.
 
 By default the readme file will hold the name of the project and a link to the
 license file. Defining a description as argument will result to fill it the
@@ -311,11 +311,10 @@ correct branch name by default from the first commit.
 
 #### Signature
 ```zsh
-$ g super-init <directory> [type] [description]
+$ g super-init [type] [description]
 ```
 
 #### Arguments
-- `directory`: The target directory name of the project.
 - `type`: The _"programming language"_ to use for the `.gitignore` file.
 - `description`: Optional description for the `README.md`.
 
