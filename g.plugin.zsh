@@ -7,18 +7,6 @@ function git {
 		else
 			command git --help
 		fi
-		return $?
-	fi
-
-	local commandName="$1"
-	local gitCommand=""
-	case $commandName in
-		ta|take)        gitCommand=git-take ;;
-	esac
-
-	if [ -n "$gitCommand" ]; then
-		shift
-		. "$G_DIR/bin/$gitCommand" "$@"
 	else
 		command git "$@"
 	fi
