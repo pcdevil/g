@@ -13,12 +13,12 @@ function git {
 	local commandName="$1"
 	local gitCommand=""
 	case $commandName in
-		cd)                   gitCommand=git-cd ;;
-		ng-ci|angular-commit) gitCommand=git-angular-commit ;;
-		si|super-init)        gitCommand=git-super-init ;;
-		su|set-user)          gitCommand=git-set-user ;;
-		sw-m|switch-main)     gitCommand=git-switch-main ;;
-		ta|take)              gitCommand=git-take ;;
+		cd)             gitCommand=git-cd ;;
+		angular-commit) gitCommand=git-angular-commit ;;
+		si|super-init)  gitCommand=git-super-init ;;
+		set-user)       gitCommand=git-set-user ;;
+		switch-main)    gitCommand=git-switch-main ;;
+		ta|take)        gitCommand=git-take ;;
 	esac
 
 	if [ -n "$gitCommand" ]; then
