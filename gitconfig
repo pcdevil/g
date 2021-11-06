@@ -21,15 +21,6 @@
 	ci-a = commit --amend
 	# amend last commit and use the same message
 	ci-as = commit --amend --no-edit
-	# angular commit aliases
-	ci-build = !git-angular-commit build
-	ci-docs = !git-angular-commit docs
-	ci-feat = !git-angular-commit feat
-	ci-fix = !git-angular-commit fix
-	ci-perf = !git-angular-commit perf
-	ci-refactor = !git-angular-commit refactor
-	ci-style = !git-angular-commit style
-	ci-test = !git-angular-commit test
 	# show staged changes
 	d-s = diff --staged
 	# download references from all remote and remove any local reference that no longer exist
@@ -58,3 +49,13 @@
 	ci = "!f() { message=\"$@\"; git commit --allow-empty --allow-empty-message --message \"$message\"; }; f"
 	# shows the content of a stash entry based on index
 	q-sh = "!f() { stashIndex=${1:-0}; git stash show --patch stash@{$stashIndex}; }; f"
+
+	## G COMMAND ALIASES ##
+	ci-build = !git-angular-commit build
+	ci-docs = !git-angular-commit docs
+	ci-feat = !git-angular-commit feat
+	ci-fix = !git-angular-commit fix
+	ci-perf = !git-angular-commit perf
+	ci-refactor = !git-angular-commit refactor
+	ci-style = !git-angular-commit style
+	ci-test = !git-angular-commit test
