@@ -364,7 +364,6 @@ Available under the [MIT license].
 [Angular's Commit Message Format]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
 [Basic aliases]: #basic-aliases
 [basic aliases]: #basic-aliases
-[cd]: #cd
 [considered as oppressive phrasing]: https://tools.ietf.org/id/draft-knodel-terminology-00.html#rfc.section.1.1
 [described in the guideline here]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
 [Features]: #features
@@ -388,13 +387,11 @@ Available under the [MIT license].
 [License]: #license
 [MIT]: https://opensource.org/licenses/MIT
 [MIT license]: LICENSE.md
-[oh-my-zsh's take]: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
 [Predefined git config]: #predefined-git-config
 [Prerequirements]: #prerequirements
 [set-user]: #set-user
 [Steps]: #steps
 [super-init]: #super-init
 [switch-main]: #switch-main
-[take]: #take
 [url match functionality]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---get-urlmatchnameURL
 [zsh]: http://www.zsh.org/
