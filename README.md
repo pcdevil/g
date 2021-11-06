@@ -108,14 +108,14 @@ provided for it out of the box.
 
 | Alias command   | **angular-commit** command    |
 | --------------- | ----------------------------- |
-| `g ci-build`    | `git-angular-commit build`    |
-| `g ci-docs`     | `git-angular-commit docs`     |
-| `g ci-feat`     | `git-angular-commit feat`     |
-| `g ci-fix`      | `git-angular-commit fix`      |
-| `g ci-perf`     | `git-angular-commit perf`     |
-| `g ci-refactor` | `git-angular-commit refactor` |
-| `g ci-style`    | `git-angular-commit style`    |
-| `g ci-test`     | `git-angular-commit test`     |
+| `g ci-build`    | `git angular-commit build`    |
+| `g ci-docs`     | `git angular-commit docs`     |
+| `g ci-feat`     | `git angular-commit feat`     |
+| `g ci-fix`      | `git angular-commit fix`      |
+| `g ci-perf`     | `git angular-commit perf`     |
+| `g ci-refactor` | `git angular-commit refactor` |
+| `g ci-style`    | `git angular-commit style`    |
+| `g ci-test`     | `git angular-commit test`     |
 
 ### Advanced aliases
 Contrary to the previous alias types, advanced aliases are designed to give
@@ -162,18 +162,18 @@ $ g angular-commit <type> <scope> <message>
 In order to use this feature more conviently, it's advised to create aliases for
 commonly used types in the [git config], for example:
 ```zsh
-$ git config --global alias.ng-ci-feat '!git-angular-commit feat'
-$ git config --global alias.ng-ci-fix '!git-angular-commit fix'
-$ git config --global alias.ng-ci-test '!git-angular-commit test'
+$ git config --global alias.ng-ci-feat 'angular-commit feat'
+$ git config --global alias.ng-ci-fix 'angular-commit fix'
+$ git config --global alias.ng-ci-test 'angular-commit test'
 ```
 
 This will add new sections to the `~/.gitconfig` file with the following
 content:
 ```gitconfig
 [alias]
-ng-ci-feat = !git-angular-commit feat
-ng-ci-fix = !git-angular-commit fix
-ng-ci-test = !git-angular-commit test
+ng-ci-feat = angular-commit feat
+ng-ci-fix = angular-commit fix
+ng-ci-test = angular-commit test
 ```
 
 _Note_: If you prefer, you can edit the config manually to achieve the same
