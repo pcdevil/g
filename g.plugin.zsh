@@ -13,7 +13,6 @@ function git {
 	local commandName="$1"
 	local gitCommand=""
 	case $commandName in
-		cd)             gitCommand=git-cd ;;
 		si|super-init)  gitCommand=git-super-init ;;
 		ta|take)        gitCommand=git-take ;;
 	esac

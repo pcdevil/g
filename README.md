@@ -14,7 +14,6 @@ See detailed functionality in the **[Features]** section!
 - **[Features]**
   - **[g]**
   - **[angular-commit]**
-  - **[cd]**
   - **[set-user]**
   - **[super-init]**
   - **[switch-main]**
@@ -183,22 +182,6 @@ result.
 
 _Note 2_: Command aliases are available in the predefined git config as [Angular
 commit aliases] too without the `ng` prefix.
-
----
-
-### cd
-Similarly to the shell built-in `cd` command, this changes the current directory
-too but it jumps to a directory relative to the git root. It can be handy if
-your project is several level deep and have to change directory very often to an
-upper level folder (eg.: `dist`, `node_modules`).
-
-#### Signature
-```zsh
-$ g cd <directory>
-```
-
-#### Arguments
-- `directory`: The directory path where to jump
 
 ---
 
