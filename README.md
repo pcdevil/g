@@ -67,6 +67,7 @@ specific git command.
 | `g ae`        | `git blame` _(as in "annotate")_ |
 | `g br`        | `git branch`                     |
 | `g cl`        | `git clone`                      |
+| `g cp`        | `git cherry-pick`                |
 | `g d`         | `git diff`                       |
 | `g me`        | `git merge`                      |
 | `g ph`        | `git push`                       |
@@ -92,6 +93,7 @@ the durability of the base command and allow free parametrisation for them.
 | `g a-f`       | `git add --intent-to-add`      | Set file as intended to add                                                             |
 | `g ci-a`      | `git commit --amend`           | Amend last commit                                                                       |
 | `g ci-as`     | `git commit --amend --no-edit` | Amend last commit and use the same message                                              |
+| `g cp-n`      | `git cherry-pick --no-commit`  | Apply an existing commit without creating a new one                                     |
 | `g d-s`       | `git diff --staged`            | Show staged changes                                                                     |
 | `g f`         | `git fetch --prune --all`      | Download references from all remote and remove any local reference that no longer exist |
 | `g me-m`      | `git merge --no-ff`            | Merge and always create merge commit                                                    |

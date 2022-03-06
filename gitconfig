@@ -3,6 +3,7 @@
 	ae = blame
 	br = branch
 	cl = clone
+	cp = cherry-pick
 	d = diff
 	me = merge
 	ph = push
@@ -21,6 +22,8 @@
 	ci-a = commit --amend
 	# amend last commit and use the same message
 	ci-as = commit --amend --no-edit
+	# apply an existing commit without creating a new one
+	cp-n = cherry-pick --no-commit
 	# show staged changes
 	d-s = diff --staged
 	# download references from all remote and remove any local reference that no longer exist
