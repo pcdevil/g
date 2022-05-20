@@ -58,6 +58,7 @@ function set_signingkey {
 	git config user.signingkey "$signingkey"
 	git config gpg.program "$gpgBin"
 	git config commit.gpgsign true
+	git config tag.gpgsign true
 }
 
 originUrl=$(get_origin-url)
