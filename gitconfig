@@ -27,7 +27,7 @@
 	# show staged changes
 	d-s = diff --staged
 	# download references from all remote and remove any local reference that no longer exist
-	f = fetch --prune --all
+	f = fetch --prune --prune-tags --all
 	# merge and always create merge commit
 	me-m = merge --no-ff
 	# merge and use suggested message
