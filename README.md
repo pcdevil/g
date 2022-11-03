@@ -87,21 +87,21 @@ the their respective descriptions.
 Basic aliases give flavour for everyday situation usages, while they still keep
 the durability of the base command and allow free parametrisation for them.
 
-| Alias command | **git** command                | Description                                                                             |
-| ------------- | ------------------------------ | --------------------------------------------------------------------------------------- |
-| `g a`         | `git add --patch`              | Add file chunks interactively                                                           |
-| `g a-f`       | `git add --intent-to-add`      | Set file as intended to add                                                             |
-| `g ci-a`      | `git commit --amend`           | Amend last commit                                                                       |
-| `g ci-as`     | `git commit --amend --no-edit` | Amend last commit and use the same message                                              |
-| `g cp-n`      | `git cherry-pick --no-commit`  | Apply an existing commit without creating a new one                                     |
-| `g d-s`       | `git diff --staged`            | Show staged changes                                                                     |
-| `g f`         | `git fetch --prune --all`      | Download references from all remote and remove any local reference that no longer exist |
-| `g me-m`      | `git merge --no-ff`            | Merge and always create merge commit                                                    |
-| `g me-s`      | `git merge --no-edit`          | Merge and use suggested message                                                         |
-| `g me-ms`     | `git merge --no-ff --no-edit`  | Merge and always create merge commit with suggested message                             |
-| `g re-s`      | `git restore --staged`         | Restore staged changes                                                                  |
-| `g q-a`       | `git stash push --all`         | Move staged, dirty and untracked files into stash                                       |
-| `g q-p`       | `git stash pop`                | Move uppermost changes from stash into working directory                                |
+| Alias command | **git** command                      | Description                                                                             |
+| ------------- | ------------------------------------ | --------------------------------------------------------------------------------------- |
+| `g a`         | `git add --patch`                    | Add file chunks interactively                                                           |
+| `g a-f`       | `git add --intent-to-add`            | Set file as intended to add                                                             |
+| `g ci-a`      | `git commit --amend`                 | Amend last commit                                                                       |
+| `g ci-as`     | `git commit --amend --no-edit`       | Amend last commit and use the same message                                              |
+| `g cp-n`      | `git cherry-pick --no-commit`        | Apply an existing commit without creating a new one                                     |
+| `g d-s`       | `git diff --staged`                  | Show staged changes                                                                     |
+| `g f`         | `git fetch --prune --all`            | Download references from all remote and remove any local reference that no longer exist |
+| `g me-m`      | `git merge --no-ff`                  | Merge and always create merge commit                                                    |
+| `g me-s`      | `git merge --no-edit`                | Merge and use suggested message                                                         |
+| `g me-ms`     | `git merge --no-ff --no-edit`        | Merge and always create merge commit with suggested message                             |
+| `g re-s`      | `git restore --staged`               | Restore staged changes                                                                  |
+| `g q-ph`      | `git stash push --include-untracked` | Move staged, dirty and untracked (but not ignored) files into stash                     |
+| `g q-pl`      | `git stash pop`                      | Move uppermost changes from stash into working directory                                |
 
 ### Angular commit aliases
 

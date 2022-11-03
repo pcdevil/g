@@ -34,10 +34,10 @@
 	me-s = merge --no-edit
 	# merge and always create merge commit with suggested message
 	me-ms = merge --no-ff --no-edit
-	# move staged, dirty and untracked files into stash
-	q-a = stash push --all
+	# move staged, dirty and untracked (but not ignored) files into stash
+	q-ph = stash push --include-tracked
 	# move uppermost changes from stash into working directory
-	q-p = stash pop
+	q-pl = stash pop
 	# restore staged changes
 	re-s = restore --staged
 
