@@ -9,11 +9,11 @@ See detailed functionality in the **[Features]** section!
 - **[Predefined git config]**
   - **[Abbreviation aliases]**
   - **[Basic aliases]**
-  - **[Angular commit aliases]**
+  - **[Conventional Commit aliases]**
   - **[Advanced aliases]**
 - **[Features]**
   - **[g]**
-  - **[angular-commit]**
+  - **[conventional-commit]**
   - **[set-user]**
   - **[super-init]**
   - **[switch-main]**
@@ -103,21 +103,23 @@ the durability of the base command and allow free parametrisation for them.
 | `g q-ph`      | `git stash push --include-untracked` | Move staged, dirty and untracked (but not ignored) files into stash                     |
 | `g q-pl`      | `git stash pop`                      | Move uppermost changes from stash into working directory                                |
 
-### Angular commit aliases
+### Conventional Commit aliases
 
-While [angular-commit] is not a standard **git** command, basic aliases are also
-provided for it out of the box.
+While [conventional-commit] is not a standard **git** command, basic aliases 
+are also provided for it out of the box.
 
-| Alias command   | **angular-commit** command    |
-| --------------- | ----------------------------- |
-| `g ci-build`    | `git angular-commit build`    |
-| `g ci-docs`     | `git angular-commit docs`     |
-| `g ci-feat`     | `git angular-commit feat`     |
-| `g ci-fix`      | `git angular-commit fix`      |
-| `g ci-perf`     | `git angular-commit perf`     |
-| `g ci-refactor` | `git angular-commit refactor` |
-| `g ci-style`    | `git angular-commit style`    |
-| `g ci-test`     | `git angular-commit test`     |
+| Alias command    | **conventional-commit** command    |
+| ---------------- | ---------------------------------- |
+| `g cci-build`    | `git conventional-commit build`    |
+| `g cci-chore`    | `git conventional-commit chore`    |
+| `g cci-ci`       | `git conventional-commit ci`       |
+| `g cci-docs`     | `git conventional-commit docs`     |
+| `g cci-feat`     | `git conventional-commit feat`     |
+| `g cci-fix`      | `git conventional-commit fix`      |
+| `g cci-perf`     | `git conventional-commit perf`     |
+| `g cci-refactor` | `git conventional-commit refactor` |
+| `g cci-style`    | `git conventional-commit style`    |
+| `g cci-test`     | `git conventional-commit test`     |
 
 ### Advanced aliases
 Contrary to the previous alias types, advanced aliases are designed to give
@@ -143,15 +145,15 @@ git repository, otherwise calls the [git help] command.
 
 ---
 
-### angular-commit
-Creates a commit in compliance with the [Angular's Commit Message Format].
+### conventional-commit
+Creates a commit in compliance with the [Conventional Commit Message Format].
 
 #### Alias
-`ng-ci`
+`cci`
 
 #### Signature
 ```zsh
-$ g angular-commit <type> <scope> <message>
+$ g conventional-commit <type> <scope> <message>
 ```
 
 #### Arguments
@@ -161,28 +163,28 @@ $ g angular-commit <type> <scope> <message>
 - `message`: The subject and body part of the commit message.
 
 #### Advanced use
-In order to use this feature more conviently, it's advised to create aliases for
-commonly used types in the [git config], for example:
+In order to use this feature more conveniently, it's advised to create aliases
+for commonly used types in the [git config], for example:
 ```zsh
-$ git config --global alias.ng-ci-feat 'angular-commit feat'
-$ git config --global alias.ng-ci-fix 'angular-commit fix'
-$ git config --global alias.ng-ci-test 'angular-commit test'
+$ git config --global alias.cci-feat 'conventional-commit feat'
+$ git config --global alias.cci-fix 'conventional-commit fix'
+$ git config --global alias.cci-test 'conventional-commit test'
 ```
 
 This will add new sections to the `~/.gitconfig` file with the following
 content:
 ```gitconfig
 [alias]
-ng-ci-feat = angular-commit feat
-ng-ci-fix = angular-commit fix
-ng-ci-test = angular-commit test
+cci-feat = conventional-commit feat
+cci-fix = conventional-commit fix
+cci-test = conventional-commit test
 ```
 
 _Note_: If you prefer, you can edit the config manually to achieve the same
 result.
 
-_Note 2_: Command aliases are available in the predefined git config as [Angular
-commit aliases] too without the `ng` prefix.
+_Note 2_: Command aliases are available in the predefined git config as
+[Conventional Commit aliases] too.
 
 ---
 
@@ -361,13 +363,12 @@ Available under the [MIT license].
 
 [Abbreviation aliases]: #abbreviation-aliases
 [Advanced aliases]: #advanced-aliases
-[angular-commit]: #angular-commit
-[Angular commit aliases]: #angular-commit-aliases
-[Angular's Commit Message Format]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
+[conventional-commit]: #conventional-commit
+[Conventional Commit aliases]: #conventional-commit-aliases
+[Conventional Commit Message Format]: https://www.conventionalcommits.org/en/v1.0.0/#summary
 [Basic aliases]: #basic-aliases
 [basic aliases]: #basic-aliases
 [considered as oppressive phrasing]: https://tools.ietf.org/id/draft-knodel-terminology-00.html#rfc.section.1.1
-[described in the guideline here]: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
 [Features]: #features
 [g]: #g-1
 [git]: https://git-scm.com

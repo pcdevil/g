@@ -54,15 +54,17 @@
 	q-sh = "!f() { stashIndex=${1:-0}; git stash show --patch stash@{$stashIndex}; }; f"
 
 	## G COMMAND ALIASES ##
-	ci-build = angular-commit build
-	ci-docs = angular-commit docs
-	ci-feat = angular-commit feat
-	ci-fix = angular-commit fix
-	ci-perf = angular-commit perf
-	ci-refactor = angular-commit refactor
-	ci-style = angular-commit style
-	ci-test = angular-commit test
-	ng-ci = angular-commit
+	cci-build = conventional-commit build
+	cci-chore = conventional-commit chore
+	cci-ci = conventional-commit ci
+	cci-docs = conventional-commit docs
+	cci-feat = conventional-commit feat
+	cci-fix = conventional-commit fix
+	cci-perf = conventional-commit perf
+	cci-refactor = conventional-commit refactor
+	cci-style = conventional-commit style
+	cci-test = conventional-commit test
+	cci = conventional-commit
 	si = super-init
 	su = set-user
 	sw-m = switch-main
