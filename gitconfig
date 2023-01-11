@@ -18,10 +18,6 @@
 	a = add --patch
 	# set file as intended to add
 	a-f = add --intent-to-add
-	# amend last commit
-	ci-a = commit --amend
-	# amend last commit and use the same message
-	ci-as = commit --amend --no-edit
 	# apply an existing commit without creating a new one
 	cp-n = cherry-pick --no-commit
 	# show staged changes
@@ -41,6 +37,14 @@
 	# restore staged changes
 	re-s = restore --staged
 
+	## COMMIT ALIASES ##
+	# very resiliant commit with message support only
+	ci = "!f() { message=\"$@\"; git commit --allow-empty --allow-empty-message --message \"$message\"; }; f"
+	# amend last commit
+	ci-a = commit --amend
+	# amend last commit and use the same message
+	ci-as = commit --amend --no-edit
+
 	## ADVANCED ALIASES ##
 	# one liner compact log
 	l = log --pretty=format:'%C(bold red)%h%Creset  %ad  %C(bold white)%aN%Creset  %s  %C(yellow)%D%Creset'
@@ -48,8 +52,6 @@
 	ph-o = "!f () { branch=`git rev-parse --abbrev-ref HEAD`; git push --set-upstream origin $branch; }; f"
 	# performs a staged and a worktree restore
 	re-2 = restore --staged --worktree --source HEAD
-	# very resiliant commit with message support only
-	ci = "!f() { message=\"$@\"; git commit --allow-empty --allow-empty-message --message \"$message\"; }; f"
 	# shows the content of a stash entry based on index
 	q-sh = "!f() { stashIndex=${1:-0}; git stash show --patch stash@{$stashIndex}; }; f"
 

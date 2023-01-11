@@ -9,7 +9,8 @@ See detailed functionality in the **[Features]** section!
 - **[Predefined git config]**
   - **[Abbreviation aliases]**
   - **[Basic aliases]**
-  - **[Conventional Commit aliases]**
+  - **[Commit aliases]**
+    - **[Conventional Commit aliases]**
   - **[Advanced aliases]**
 - **[Features]**
   - **[g]**
@@ -87,12 +88,10 @@ the their respective descriptions.
 Basic aliases give flavour for everyday situation usages, while they still keep
 the durability of the base command and allow free parametrisation for them.
 
-| Alias command | **git** command                      | Description                                                                             |
+| Alias command | Equivalent **git** command           | Description                                                                             |
 | ------------- | ------------------------------------ | --------------------------------------------------------------------------------------- |
 | `g a`         | `git add --patch`                    | Add file chunks interactively                                                           |
 | `g a-f`       | `git add --intent-to-add`            | Set file as intended to add                                                             |
-| `g ci-a`      | `git commit --amend`                 | Amend last commit                                                                       |
-| `g ci-as`     | `git commit --amend --no-edit`       | Amend last commit and use the same message                                              |
 | `g cp-n`      | `git cherry-pick --no-commit`        | Apply an existing commit without creating a new one                                     |
 | `g d-s`       | `git diff --staged`                  | Show staged changes                                                                     |
 | `g f`         | `git fetch --prune --all`            | Download references from all remote and remove any local reference that no longer exist |
@@ -103,23 +102,31 @@ the durability of the base command and allow free parametrisation for them.
 | `g q-ph`      | `git stash push --include-untracked` | Move staged, dirty and untracked (but not ignored) files into stash                     |
 | `g q-pl`      | `git stash pop`                      | Move uppermost changes from stash into working directory                                |
 
-### Conventional Commit aliases
+### Commit aliases
 
-While [conventional-commit] is not a standard **git** command, basic aliases 
-are also provided for it out of the box.
+| Alias command | Equivalent **git** command     | Description                                |
+| ------------- | ------------------------------ | ------------------------------------------ |
+| `g ci`        | `git commit --message="$@"`    | Commit and use all arguments as message    |
+| `g ci-a`      | `git commit --amend`           | Amend last commit                          |
+| `g ci-as`     | `git commit --amend --no-edit` | Amend last commit and use the same message |
 
-| Alias command    | **conventional-commit** command    |
-| ---------------- | ---------------------------------- |
-| `g cci-build`    | `git conventional-commit build`    |
-| `g cci-chore`    | `git conventional-commit chore`    |
-| `g cci-ci`       | `git conventional-commit ci`       |
-| `g cci-docs`     | `git conventional-commit docs`     |
-| `g cci-feat`     | `git conventional-commit feat`     |
-| `g cci-fix`      | `git conventional-commit fix`      |
-| `g cci-perf`     | `git conventional-commit perf`     |
-| `g cci-refactor` | `git conventional-commit refactor` |
-| `g cci-style`    | `git conventional-commit style`    |
-| `g cci-test`     | `git conventional-commit test`     |
+#### Conventional Commit aliases
+
+The `g` wrapper provides a feature called [conventional-commit] which accepts a
+second argument for _type_. The described aliases below bound this argument.
+
+| Alias command    | Equivalent **conventional-commit** command |
+| ---------------- | ------------------------------------------ |
+| `g cci-build`    | `git conventional-commit build`            |
+| `g cci-chore`    | `git conventional-commit chore`            |
+| `g cci-ci`       | `git conventional-commit ci`               |
+| `g cci-docs`     | `git conventional-commit docs`             |
+| `g cci-feat`     | `git conventional-commit feat`             |
+| `g cci-fix`      | `git conventional-commit fix`              |
+| `g cci-perf`     | `git conventional-commit perf`             |
+| `g cci-refactor` | `git conventional-commit refactor`         |
+| `g cci-style`    | `git conventional-commit style`            |
+| `g cci-test`     | `git conventional-commit test`             |
 
 ### Advanced aliases
 Contrary to the previous alias types, advanced aliases are designed to give
@@ -127,13 +134,12 @@ solution in a strict situation without taking account other type of application.
 See the "Notes" section how they allow parametrisation for the underlying
 **git** command!
 
-| Alias command | Description                                                           | Notes                                                                                                |
-| ------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `g l`         | Print a coloured, compact one-liner log                               | Only `--pretty=format` used, any other [git log] argument works                                      |
-| `g ph-o`      | Set upstream to origin and push the current branch                    | Doesn't take any argument                                                                            |
-| `g re-2`      | Restore both staged and unstaged changes                              | Any argument is passed through to [git restore]                                                      |
-| `g ci`        | Quick commit where neither the changes, nor the message are mandatory | Any argument will be passed as message to [git commit]                                               |
-| `g q-sh`      | Shows the content of a stash entry                                    | An optional argument can be given and passed as index to the [git stash] _(see description section)_ |
+| Alias command | Description                                        | Notes                                                                                                |
+| ------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `g l`         | Print a coloured, compact one-liner log            | Only `--pretty=format` used, any other [git log] argument works                                      |
+| `g ph-o`      | Set upstream to origin and push the current branch | Doesn't take any argument                                                                            |
+| `g re-2`      | Restore both staged and unstaged changes           | Any argument is passed through to [git restore]                                                      |
+| `g q-sh`      | Shows the content of a stash entry                 | An optional argument can be given and passed as index to the [git stash] _(see description section)_ |
 
 ## Features
 
@@ -363,11 +369,11 @@ Available under the [MIT license].
 
 [Abbreviation aliases]: #abbreviation-aliases
 [Advanced aliases]: #advanced-aliases
+[Commit aliases]: #commit-aliases
 [conventional-commit]: #conventional-commit
 [Conventional Commit aliases]: #conventional-commit-aliases
 [Conventional Commit Message Format]: https://www.conventionalcommits.org/en/v1.0.0/#summary
 [Basic aliases]: #basic-aliases
-[basic aliases]: #basic-aliases
 [considered as oppressive phrasing]: https://tools.ietf.org/id/draft-knodel-terminology-00.html#rfc.section.1.1
 [Features]: #features
 [g]: #g-1
