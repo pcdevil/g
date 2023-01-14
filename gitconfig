@@ -44,6 +44,12 @@
 	ci-a = commit --amend
 	# amend last commit and use the same message
 	ci-as = commit --amend --no-edit
+	# commit as amend for later rebased with autosquash
+	ci-ra = "!f() { hash=\"$1\"; shift; restArgs=\"$@\"; git commit --fixup=amend:$hash $restArgs; }; f"
+	# commit as fixup for later rebased with autosquash
+	ci-rf = "!f() { hash=\"$1\"; shift; restArgs=\"$@\"; git commit --fixup=$hash $restArgs; }; f"
+	# commit as reword for later rebased with autosquash
+	ci-rr = "!f() { hash=\"$1\"; shift; restArgs=\"$@\"; git commit --fixup=reword:$hash $restArgs; }; f"
 
 	## ADVANCED ALIASES ##
 	# one liner compact log

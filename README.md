@@ -104,11 +104,14 @@ the durability of the base command and allow free parametrisation for them.
 
 ### Commit aliases
 
-| Alias command | Equivalent **git** command     | Description                                |
-| ------------- | ------------------------------ | ------------------------------------------ |
-| `g ci`        | `git commit --message="$@"`    | Commit and use all arguments as message    |
-| `g ci-a`      | `git commit --amend`           | Amend last commit                          |
-| `g ci-as`     | `git commit --amend --no-edit` | Amend last commit and use the same message |
+| Alias command | Equivalent **git** command            | Description                                                                                                           |
+| ------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `g ci`        | `git commit --message="$@"`           | Commit and use all arguments as message                                                                               |
+| `g ci-a`      | `git commit --amend`                  | Amend last commit                                                                                                     |
+| `g ci-as`     | `git commit --amend --no-edit`        | Amend last commit and use the same message                                                                            |
+| `g ci-ra`     | `git commit --fixup=amend:$1 ${@:2}`  | Commit as _amend_ (fixup and reword) for later [rebased with autosquash], see [git commit fixup] for more information |
+| `g ci-rf`     | `git commit --fixup=$1 ${@:2}`        | Commit as _fixup_ for later rebased with autosquash                                                                   |
+| `g ci-rr`     | `git commit --fixup=reword:$1 ${@:2}` | Commit as _reword_ for later rebased with autosquash                                                                  |
 
 #### Conventional Commit aliases
 
@@ -380,6 +383,7 @@ Available under the [MIT license].
 [git]: https://git-scm.com
 [git clone]: https://git-scm.com/docs/git-clone
 [git commit]: https://git-scm.com/docs/git-commit
+[git commit fixup]: https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt
 [git config]: https://git-scm.com/docs/git-config
 [git global config]: https://git-scm.com/docs/git-config#Documentation/git-config.txt---global
 [git help]: https://git-scm.com/docs/git-help
@@ -388,6 +392,7 @@ Available under the [MIT license].
 [git stash]: https://git-scm.com/docs/git-stash
 [git status]: https://git-scm.com/docs/git-status
 [git switch]: https://git-scm.com/docs/git-switch
+[rebased with autosquash]: https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---autosquash
 [git-set-user]: #set-user
 [GitHub Pages]: https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site
 [gitignore.io]: https://www.toptal.com/developers/gitignore
