@@ -79,7 +79,7 @@ specific git command.
 | `g sw`        | `git switch`                     |
 
 _Note_: [git restore] and [git switch] only available since **git** v2.23, below
-thaat the `re` and the `sw` alias produces error!
+that the `re` and the `sw` alias produces error!
 
 _Note_: All features of `g` also have an abbreviation alias, which described in
 the their respective descriptions.
@@ -99,7 +99,7 @@ the durability of the base command and allow free parametrisation for them.
 | `g me-s`      | `git merge --no-edit`                | Merge and use suggested message                                                         |
 | `g me-ms`     | `git merge --no-ff --no-edit`        | Merge and always create merge commit with suggested message                             |
 | `g re-s`      | `git restore --staged`               | Restore staged changes                                                                  |
-| `g q-ph`      | `git stash push --include-untracked` | Move staged, dirty and untracked (but not ignored) files into stash                     |
+| `g q-ph`      | `git stash push --include-untracked` | Move staged, dirty and untracked (but not ignored) changes into stash                   |
 | `g q-pl`      | `git stash pop`                      | Move uppermost changes from stash into working directory                                |
 
 ### Commit aliases
