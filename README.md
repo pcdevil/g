@@ -26,7 +26,7 @@ See detailed functionality in the **[Features]** section!
 
 ### Prerequirements
 - unix-like system
-- [git] (minimum: v1.7+, recommended: v2.23+)
+- [git] (minimum: v1.7+, recommended: v2.35+)
 - [zsh]
 
 ### Steps
@@ -101,6 +101,9 @@ the durability of the base command and allow free parametrisation for them.
 | `g re-s`      | `git restore --staged`               | Restore staged changes                                                                  |
 | `g q-ph`      | `git stash push --include-untracked` | Move staged, dirty and untracked (but not ignored) changes into stash                   |
 | `g q-pl`      | `git stash pop`                      | Move uppermost changes from stash into working directory                                |
+| `g q-s`       | `git stash push --staged`            | Move staged only changes into stash                                                     |
+
+_Note_: [git stash push --staged] only available since **git** v3.35, below that the `g q-s` alias produces error!
 
 ### Commit aliases
 
@@ -390,6 +393,7 @@ Available under the [MIT license].
 [git log]: https://git-scm.com/docs/git-log
 [git restore]: https://git-scm.com/docs/git-restore
 [git stash]: https://git-scm.com/docs/git-stash
+[git stash push --staged]: https://git-scm.com/docs/git-stash#Documentation/git-stash.txt---staged
 [git status]: https://git-scm.com/docs/git-status
 [git switch]: https://git-scm.com/docs/git-switch
 [rebased with autosquash]: https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---autosquash

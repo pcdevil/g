@@ -34,6 +34,8 @@
 	q-ph = stash push --include-tracked
 	# move uppermost changes from stash into working directory
 	q-pl = stash pop
+	# move staged only changes into stash
+	q-s = stash push --staged
 	# restore staged changes
 	re-s = restore --staged
 
