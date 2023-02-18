@@ -37,12 +37,10 @@ See detailed functionality in the **[Features]** section!
 
 2. Bootstrap it in your `.zshrc`:
     ```zsh
-    # Export the destionation folder as G_DIR variable
-    export G_DIR=$HOME/.g
     # Load the init script of g. This will do the followings:
     # - installs the `g` command
-    # - adds the $G_DIR/bin directory to the $PATH
-    source $G_DIR/g.plugin.zsh
+    # - adds the project's bin directory to the $PATH
+    source $HOME/.g/g.plugin.zsh
     ```
 
 3. (Optional) Install `gitconfig`:

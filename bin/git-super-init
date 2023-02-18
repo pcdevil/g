@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+gBinDir=$(dirname $(realpath $0))
+gAssetsDir=$(realpath ${gBinDir}/../assets)
+
 function init_git_folder {
 	git init
 	git switch-main --create
@@ -15,7 +18,7 @@ function create_license {
 		echo
 		echo "Copyright $year $author $url"
 		echo
-		cat $G_DIR/assets/mit-license
+		cat $gAssetsDir/mit-license
 	) >LICENSE.md
 }
 
@@ -54,7 +57,7 @@ function create_gitignore {
 }
 
 function extend_gitignore {
-	cat $G_DIR/assets/gitignore-extension >>.gitignore
+	cat $gAssetsDir/gitignore-extension >>.gitignore
 }
 
 function create_ignored-folder {
