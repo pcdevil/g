@@ -39,9 +39,9 @@ See detailed functionality in the **[Features]** section!
     ```zsh
     # Export the destionation folder as G_DIR variable
     export G_DIR=$HOME/.g
-    # Add bin folder to the PATH
-    export PATH=$G_DIR/bin:$PATH
-    # Load the init script of g
+    # Load the init script of g. This will do the followings:
+    # - installs the `g` command
+    # - adds the $G_DIR/bin directory to the $PATH
     source $G_DIR/g.plugin.zsh
     ```
 

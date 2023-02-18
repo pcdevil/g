@@ -1,3 +1,8 @@
+#!/usr/bin/env zsh
+
+gRootDir=$(dirname $(realpath $0))
+gBinDir=$gRootDir/bin
+
 function git {
 	local gitRootDir=$(command git rev-parse --show-toplevel 2>/dev/null)
 
@@ -17,3 +22,8 @@ function git {
 }
 
 alias g=git
+
+path=(
+	$gBinDir
+	$path
+)
