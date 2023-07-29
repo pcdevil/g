@@ -308,13 +308,13 @@ Toptal's [gitignore.io].
 
 The following templates are applied by default:
 - **Operating systems**: Linux, macOS, Windows
-- **Editors**: IntelliJ+all, Vim, Visual Studio Code
+- **Editors**: JetBrains, Sublime Text, Vim, Visual Studio Code
 - **Custom elements**: `[git root]/.tmp` directory, `.env` files, but negated
   any `.gitkeep` file occurrences
 
 If a _[type]_ is also defined then the appropriate programming language will be
-added to the ignore too. Currently supported languages are `java`, `node`, `php`
-and `rust`.
+added to the ignore too. Currently supported languages are `java`, `node`,
+`php`, `python` and `rust`.
 
 The [switch-main] command will be also called with the create flag, ensuring the
 correct branch name by default from the first commit.

@@ -41,11 +41,12 @@ function create_gitignore {
 
 	local osIgnores=(linux macos windows)
 
-	local editorIgnores=(intellij+all vim visualstudiocode)
+	local editorIgnores=(jetbrains+all sublimetext vim visualstudiocode)
 
 	local javaIgnores=(java maven)
 	local nodeIgnores=(node)
 	local phpIgnores=(composer)
+	local pythongIgnores=(python)
 	local rustIgnores=(rust)
 
 	local typedIgnoredVariable=${type}Ignores
