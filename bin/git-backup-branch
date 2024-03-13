@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+backupBranch=${1}
+if [[ -z "$backupBranch" ]]; then
+	currentBranch=$(git rev-parse --abbrev-ref HEAD)
+	date=$(date '+%Y-%m-%d')
+	time=$(date '+%H-%M')
+	backupBranch=backup/${currentBranch}/${date}_${time}
+fi
+
+git update-ref refs/heads/${backupBranch} HEAD
+exit $?

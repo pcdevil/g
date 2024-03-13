@@ -14,6 +14,7 @@ See detailed functionality in the **[Features]** section!
   - **[Advanced aliases]**
 - **[Features]**
   - **[g]**
+  - **[backup-branch]**
   - **[conventional-commit]**
   - **[set-user]**
   - **[super-init]**
@@ -154,6 +155,23 @@ Calling it without arguments executes the [git status] itself if the _CWD_ is a
 git repository, otherwise calls the [git help] command.
 
 ---
+
+### backup-branch
+Creates a new branch with the history of the current one for safekeeping.
+
+By default the new branch's name follows the
+`backup/$currentBranch/%Y-%m-%d_%H-%M` pattern where `$currentBranch` is the
+name of the current branch and `%Y-%m-%d_%H-%M` is the current time in
+_year-month-day_hours-minutes_ format. This can be overriden by the optional
+`backup_name` argument.
+
+#### Signature
+```zsh
+$ g backup-branch [backup_name]
+```
+
+#### Arguments
+- `backup_name`: The name of the backup.
 
 ### conventional-commit
 Creates a commit in compliance with the [Conventional Commit Message Format].
@@ -373,6 +391,7 @@ Available under the [MIT license].
 
 [Abbreviation aliases]: #abbreviation-aliases
 [Advanced aliases]: #advanced-aliases
+[backup-branch]: #backup-branch
 [Commit aliases]: #commit-aliases
 [conventional-commit]: #conventional-commit
 [Conventional Commit aliases]: #conventional-commit-aliases
