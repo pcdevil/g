@@ -8,5 +8,5 @@ if [[ -z "$backupBranch" ]]; then
 	backupBranch=backup/${currentBranch}/${date}_${time}
 fi
 
-git update-ref refs/heads/${backupBranch} HEAD
+git branch --copy ${backupBranch}
 exit $?
